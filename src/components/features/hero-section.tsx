@@ -6,12 +6,12 @@ import { AiFillStar } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
 
 const studentAvatars = [
-    "/avatars/avatar-1.jpg",
-    "/avatars/avatar-2.jpg",
-    "/avatars/avatar-3.jpg",
-    "/avatars/avatar-4.jpg",
-    "/avatars/avatar-5.jpg",
-    "/avatars/avatar-6.jpg",
+    "/avatars/avatar-1.png",
+    "/avatars/avatar-2.png",
+    "/avatars/avatar-3.png",
+    "/avatars/avatar-4.png",
+    "/avatars/avatar-5.png",
+    "/avatars/avatar-6.png",
 ];
 
 export default function HeroSection() {
@@ -292,7 +292,7 @@ export default function HeroSection() {
                             </div>
                         ))}
                         {/* 2K+ Green Pill Badge */}
-                        <div className="-ml-3.5 w-[40px] h-[40px] rounded-full bg-[#D4FB20] text-[#242528] text-[12px] font-bold flex items-center justify-center border-2 border-white shadow-xs shrink-0">
+                        <div className="-ml-3.5 size-10 rounded-full bg-[#D4FB20] text-[#242528] text-[12px] font-bold flex items-center justify-center border-2 border-white shadow-xs shrink-0 z-10">
                             2K+
                         </div>
                     </div>
