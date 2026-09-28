@@ -54,7 +54,7 @@ export default function BrandSection() {
                             alt={brand.name}
                             width={brand.width}
                             height={brand.height}
-                            className="h-7 sm:h-[30px] w-auto object-contain"
+                            className="h-7 sm:h-7.5 w-auto object-contain"
                         />
                     </div>
                 ))}
