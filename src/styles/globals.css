@@ -265,3 +265,70 @@ textarea::placeholder {
         transition-duration: 0.01ms !important;
     }
 }
+
+.font-poppins {
+    font-family: var(--font-poppins), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.hero-grid-pattern {
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+    background-size: 120px 120px;
+    background-position: center top;
+}
+
+@keyframes float-slow {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-14px) rotate(1.5deg);
+    }
+}
+
+@keyframes float-medium {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(-2deg);
+    }
+}
+
+@keyframes float-reverse {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(12px) rotate(2deg);
+    }
+}
+
+@keyframes pulse-subtle {
+    0%, 100% {
+        opacity: 0.95;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+}
+
+.animate-float-slow {
+    animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-float-medium {
+    animation: float-medium 4.5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+    animation: float-reverse 5.5s ease-in-out infinite;
+}
+
+.animate-pulse-subtle {
+    animation: pulse-subtle 4s ease-in-out infinite;
+}
+
