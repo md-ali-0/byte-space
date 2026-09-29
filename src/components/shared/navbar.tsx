@@ -14,6 +14,15 @@ const navItems = [
 export default function Navbar() {
     const pathname = usePathname();
 
+    const isAuthPage =
+        pathname?.startsWith("/register") ||
+        pathname?.startsWith("/signup") ||
+        pathname?.startsWith("/login");
+
+    if (isAuthPage) {
+        return null;
+    }
+
     const isRegister = pathname === "/register" || pathname === "/signup";
     const isLogin = pathname === "/login";
 
