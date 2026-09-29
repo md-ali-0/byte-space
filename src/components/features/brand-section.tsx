@@ -36,28 +36,32 @@ const brands = [
 export default function BrandSection() {
     return (
         <section
-            className="w-full bg-[#F5F5F6] py-12 md:py-14 select-none"
+            className="w-full bg-[#F5F5F6] py-12 sm:py-16 lg:pt-[81px] lg:pb-[80px] select-none"
             aria-label="Trusted brands"
         >
-            <div className="container-page grid grid-cols-2 sm:grid-cols-3 md:flex md:items-center md:justify-between gap-8 md:gap-6">
-                {brands.map((brand, index) => (
-                    <div
-                        key={brand.src}
-                        className={`flex items-center justify-center transition-all duration-300 hover:opacity-75 ${
-                            index === brands.length - 1
-                                ? "col-span-2 sm:col-span-1"
-                                : ""
-                        }`}
-                    >
-                        <Image
-                            src={brand.src}
-                            alt={brand.name}
-                            width={brand.width}
-                            height={brand.height}
-                            className="h-7 sm:h-7.5 w-auto object-contain"
-                        />
-                    </div>
-                ))}
+            <div className="w-full max-w-[1132px] mx-auto px-6 xl:px-0">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:items-center lg:justify-between gap-8 sm:gap-10 lg:gap-0">
+                    {brands.map((brand, index) => (
+                        <div
+                            key={brand.src}
+                            className={`flex items-center justify-center transition-opacity duration-200 hover:opacity-70 ${
+                                index === brands.length - 1
+                                    ? "col-span-2 sm:col-span-1"
+                                    : ""
+                            }`}
+                        >
+                            <Image
+                                src={brand.src}
+                                alt={brand.name}
+                                width={brand.width}
+                                height={brand.height}
+                                unoptimized
+                                priority
+                                className="h-7 sm:h-8 md:h-9 lg:h-[41px] w-auto object-contain"
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     );
