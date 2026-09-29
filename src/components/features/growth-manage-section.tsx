@@ -116,60 +116,96 @@ export default function GrowthManageSection() {
 
                     <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end">
                         <div className="relative w-full max-w-[550px] h-[500px] sm:h-[540px]">
-                            <div className="absolute left-0 sm:left-2 top-2 sm:top-4 w-[285px] sm:w-[325px] bg-white rounded-[28px] border border-[#DDDEE0] p-3.5 sm:p-4 shadow-[0_10px_32px_rgba(0,0,0,0.06)] z-10 pointer-events-none">
-                                <div className="relative w-full aspect-16/10 rounded-[20px] overflow-hidden">
+                            <div className="absolute left-0 sm:-left-12 top-2 sm:top-4 w-[315px] sm:w-[355px] md:w-[370px] bg-white rounded-[28px] sm:rounded-[32px] border border-[#DDDEE0] p-4 sm:p-4.5 shadow-[0_12px_36px_rgba(0,0,0,0.06)] z-10 pointer-events-none">
+                                <div className="relative w-full aspect-[341/196] rounded-[18px] sm:rounded-[20px] overflow-hidden bg-[#F5F5F6]">
                                     <Image
                                         src="/courses/course-1.png"
                                         alt="Learn Figma from Basic"
                                         fill
-                                        sizes="(max-width: 640px) 285px, 325px"
+                                        sizes="(max-width: 640px) 315px, 370px"
                                         className="object-cover"
                                     />
-                                    <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between gap-1.5">
-                                        <span className="px-2.5 py-1 rounded-full bg-white/85 backdrop-blur-xs text-[11px] font-medium text-[#111111] shadow-xs">
+                                    <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between gap-1 select-none">
+                                        <span className="px-2.5 py-1 rounded-full bg-white/80 backdrop-blur-md text-[10.5px] sm:text-[11.5px] font-medium text-[#242528] shadow-xs whitespace-nowrap">
                                             17 Lessons
                                         </span>
-                                        <span className="px-2.5 py-1 rounded-full bg-white/85 backdrop-blur-xs text-[11px] font-medium text-[#111111] shadow-xs">
+                                        <span className="px-2.5 py-1 rounded-full bg-white/80 backdrop-blur-md text-[10.5px] sm:text-[11.5px] font-medium text-[#242528] shadow-xs whitespace-nowrap">
                                             2 hours 16 mins
+                                        </span>
+                                        <span className="px-2.5 py-1 rounded-full bg-white/80 backdrop-blur-md text-[10.5px] sm:text-[11.5px] font-medium text-[#242528] shadow-xs whitespace-nowrap">
+                                            59 Comments
                                         </span>
                                     </div>
                                 </div>
-                                <div className="mt-3">
-                                    <h3 className="font-poppins font-semibold text-[16px] sm:text-[17px] text-[#111111] leading-snug">
+
+                                <div className="mt-4 flex items-center justify-between gap-2">
+                                    <h3 className="font-poppins font-semibold text-[17px] sm:text-[18px] text-[#111111] leading-tight">
                                         Learn Figma from Basic
                                     </h3>
-                                    <p className="mt-1 text-[13px] text-[#82868E]">
-                                        by{" "}
-                                        <span className="text-[#003BE2] font-medium">
-                                            purepearl studio
+                                    <div className="flex items-center gap-1 shrink-0">
+                                        <span className="text-[15px] sm:text-[16px] font-medium text-[#4F4F4F] leading-none">
+                                            4.5
                                         </span>
-                                    </p>
+                                        <AiFillStar className="text-[#D4FB20] text-[18px] sm:text-[19px]" />
+                                    </div>
                                 </div>
-                                <div className="mt-3.5 pt-3 border-t border-[#F0F1F3] flex items-center justify-between">
-                                    <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#F3F4F6] text-[12px] font-medium text-[#414244]">
+
+                                <p className="mt-1 sm:mt-1.5 text-[13px] text-[#82868E]">
+                                    by{" "}
+                                    <span className="text-[#003BE2] font-medium">
+                                        purepearl studio
+                                    </span>
+                                </p>
+
+                                <div className="mt-4 sm:mt-4.5 flex items-center gap-2.5 sm:gap-3">
+                                    <div className="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-full bg-[#F5F5F7] text-[12px] sm:text-[13px] font-medium text-[#414244]">
                                         <svg
-                                            className="w-3.5 h-3.5 text-[#6B7280]"
+                                            width="13"
+                                            height="13"
                                             viewBox="0 0 16 16"
                                             fill="currentColor"
+                                            className="text-[#414244] shrink-0"
                                             aria-hidden="true"
                                         >
-                                            <path d="M2 11h2v3H2zm5-4h2v7H7zm5-6h2v13h-2z" />
+                                            <rect x="2" y="10" width="2.5" height="4" rx="1" />
+                                            <rect x="6.75" y="6" width="2.5" height="8" rx="1" />
+                                            <rect x="11.5" y="2" width="2.5" height="12" rx="1" />
                                         </svg>
                                         <span>Beginner</span>
                                     </div>
 
-                                    <div className="flex items-baseline">
-                                        <span className="text-[20px] font-bold text-[#003BE2]">
-                                            $25
-                                        </span>
-                                        <span className="text-[12px] text-[#82868E] ml-0.5">
-                                            /lifetime
-                                        </span>
+                                    <div className="flex items-center -space-x-2">
+                                        {happyStudentAvatars.slice(0, 4).map((src, i) => (
+                                            <div
+                                                key={i}
+                                                className="relative w-7.5 h-7.5 sm:w-8 sm:h-8 rounded-full border-2 border-white overflow-hidden shadow-xs shrink-0"
+                                            >
+                                                <Image
+                                                    src={src}
+                                                    alt={`Student ${i + 1}`}
+                                                    fill
+                                                    sizes="32px"
+                                                    className="object-cover"
+                                                />
+                                            </div>
+                                        ))}
+                                        <div className="relative w-7.5 h-7.5 sm:w-8 sm:h-8 rounded-full bg-black text-white text-[10.5px] sm:text-[11px] font-semibold flex items-center justify-center border-2 border-white shadow-xs shrink-0 z-10">
+                                            26+
+                                        </div>
                                     </div>
+                                </div>
+
+                                <div className="mt-3.5 sm:mt-4 flex items-baseline">
+                                    <span className="text-[22px] sm:text-[24px] font-bold text-[#003BE2] leading-none">
+                                        $25
+                                    </span>
+                                    <span className="text-[12px] sm:text-[13px] text-[#82868E] ml-1 font-normal">
+                                        /lifetime
+                                    </span>
                                 </div>
                             </div>
 
-                            <div className="absolute top-[80px] sm:top-[90px] right-2 sm:right-6 w-[125px] sm:w-[180px] z-50 pointer-events-none">
+                            <div className="absolute top-[80px] sm:top-[80px] right-2 sm:-right-6 w-[125px] sm:w-[190px] z-50 pointer-events-none">
                                 <Image
                                     src="/images/patterns/pattern-8.png"
                                     alt="Decorative Lime 3D Spiral"
@@ -190,11 +226,11 @@ export default function GrowthManageSection() {
                                 />
                             </div>
 
-                            <div className="absolute top-[180px] sm:top-[200px] right-0 sm:right-2 z-30 bg-white/95 backdrop-blur-md rounded-[20px] p-4 sm:p-5 shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-white/80 min-w-[175px] sm:min-w-[195px]">
+                            <div className="absolute top-[180px] sm:top-[230px] right-0 sm:right-4 z-30 bg-white/95 backdrop-blur-md rounded-[20px] p-4 sm:p-5 shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-white/80 min-w-[175px] sm:min-w-[235px]">
                                 <span className="block text-[12px] sm:text-[13px] text-[#55575B] font-medium leading-none">
                                     Learning Progress
                                 </span>
-                                <span className="block text-[32px] sm:text-[38px] font-poppins font-bold text-[#111111] leading-none my-3.5">
+                                <span className="block text-[32px] sm:text-[38px] font-poppins font-bold text-[#111111] leading-none my-4.5">
                                     55%
                                 </span>
                                 <div className="w-full h-[8px] bg-[#EAECEF] rounded-full overflow-hidden">
