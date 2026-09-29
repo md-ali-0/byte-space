@@ -1,6 +1,8 @@
 import BrandSection from "@/components/features/brand-section";
 import CoursesSection from "@/components/features/courses-section";
+import GrowthManageSection from "@/components/features/growth-manage-section";
 import HeroSection from "@/components/features/hero-section";
+import LearningPathsSection from "@/components/features/learning-paths-section";
 
 export default function Home() {
     return (
@@ -8,6 +10,8 @@ export default function Home() {
             <HeroSection />
             <BrandSection />
             <CoursesSection />
+            <LearningPathsSection />
+            <GrowthManageSection />
         </main>
     );
 }
