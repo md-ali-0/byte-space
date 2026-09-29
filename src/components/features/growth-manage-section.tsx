@@ -169,17 +169,17 @@ export default function GrowthManageSection() {
                                 </div>
                             </div>
 
-                            <div className="absolute top-[80px] sm:top-[90px] right-2 sm:right-6 w-[125px] sm:w-[155px] z-10 pointer-events-none animate-float-slow">
+                            <div className="absolute top-[80px] sm:top-[90px] right-2 sm:right-6 w-[125px] sm:w-[180px] z-50 pointer-events-none">
                                 <Image
-                                    src="/images/patterns/pattern-1.png"
+                                    src="/images/patterns/pattern-8.png"
                                     alt="Decorative Lime 3D Spiral"
                                     width={155}
                                     height={155}
-                                    className="w-full h-auto drop-shadow-[0_14px_28px_rgba(0,0,0,0.12)]"
+                                    className="w-full h-auto drop-shadow-[0_14px_28px_rgba(0,0,0,0.12)] -rotate-45"
                                 />
                             </div>
 
-                            <div className="absolute bottom-0 right-4 sm:right-8 md:right-12 w-[370px] sm:w-[450px] md:w-[485px] z-20 pointer-events-none">
+                            <div className="absolute bottom-0 -left-16 w-[370px] sm:w-[450px] md:w-[720px] z-20 pointer-events-none">
                                 <Image
                                     src="/images/hero-student.png"
                                     alt="Student learning online"
@@ -190,14 +190,14 @@ export default function GrowthManageSection() {
                                 />
                             </div>
 
-                            <div className="absolute top-[180px] sm:top-[200px] right-0 sm:right-2 z-30 bg-white/95 backdrop-blur-md rounded-[20px] p-4 sm:p-5 shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-white/80 min-w-[175px] sm:min-w-[195px] animate-float-medium">
+                            <div className="absolute top-[180px] sm:top-[200px] right-0 sm:right-2 z-30 bg-white/95 backdrop-blur-md rounded-[20px] p-4 sm:p-5 shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-white/80 min-w-[175px] sm:min-w-[195px]">
                                 <span className="block text-[12px] sm:text-[13px] text-[#55575B] font-medium leading-none">
                                     Learning Progress
                                 </span>
-                                <span className="block text-[32px] sm:text-[38px] font-poppins font-bold text-[#111111] leading-none my-2.5">
+                                <span className="block text-[32px] sm:text-[38px] font-poppins font-bold text-[#111111] leading-none my-3.5">
                                     55%
                                 </span>
-                                <div className="w-full h-[6px] bg-[#EAECEF] rounded-full overflow-hidden">
+                                <div className="w-full h-[8px] bg-[#EAECEF] rounded-full overflow-hidden">
                                     <div
                                         className="h-full bg-[#CBFC01] rounded-full transition-all duration-700"
                                         style={{ width: "55%" }}
@@ -211,28 +211,28 @@ export default function GrowthManageSection() {
                 <div className="mt-20 sm:mt-24 lg:mt-20 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-end">
                     <div className="lg:col-span-6 relative flex items-end justify-center lg:justify-start order-2 lg:order-1">
                         <div className="relative w-full max-w-[550px] h-[520px] sm:h-[580px]">
-                            <div className="absolute top-6 sm:top-10 left-0 sm:left-2 z-10 bg-[#003BE2] rounded-[18px] p-3.5 sm:p-4 text-white shadow-[0_14px_34px_rgba(0,59,226,0.32)] w-[185px] sm:w-[215px] animate-float-medium">
-                                <span className="block text-[11px] sm:text-[12px] text-white/80 font-normal leading-none">
+                            <div className="absolute top-6 sm:top-10 left-0 z-10 bg-[#003BE2] rounded-[18px] p-3.5 sm:p-4 text-white shadow-[0_14px_34px_rgba(0,59,226,0.32)] w-[185px] sm:w-[260px]">
+                                <span className="block text-[11px] sm:text-[14px] text-white/80 font-normal leading-none">
                                     Total Revenue
                                 </span>
-                                <span className="block text-[9px] sm:text-[10px] text-white/60 font-normal mt-1 leading-none">
+                                <span className="block text-[9px] sm:text-[11px] text-white/60 font-normal mt-1 leading-none">
                                     July 1-28
                                 </span>
                                 <span className="block text-[21px] sm:text-[24px] font-poppins font-bold text-white mt-2 leading-none">
                                     $120.29
                                 </span>
-                                <div className="w-full h-[4px] bg-white/20 rounded-full mt-3 overflow-hidden">
+                                <div className="w-full h-[8px] bg-white rounded-full mt-3 overflow-hidden">
                                     <div
                                         className="h-full bg-[#CBFC01] rounded-full"
                                         style={{ width: "65%" }}
                                     />
                                 </div>
                             </div>
-                            <div className="absolute top-[175px] sm:top-[200px] left-0 sm:left-2 z-10 bg-[#003BE2] rounded-[18px] p-3.5 sm:p-4 text-white shadow-[0_14px_34px_rgba(0,59,226,0.32)] w-[155px] sm:w-[175px] animate-float-slow">
-                                <span className="block text-[11px] sm:text-[12px] text-white/80 font-normal leading-none">
+                            <div className="absolute top-[175px] sm:top-[200px] left-0 z-10 bg-[#003BE2] rounded-[18px] p-3.5 sm:p-4 text-white shadow-[0_14px_34px_rgba(0,59,226,0.32)] w-[155px] sm:w-[150px]">
+                                <span className="block text-[11px] sm:text-[13px] text-white/80 font-normal leading-none">
                                     Year to Date
                                 </span>
-                                <span className="block text-[9px] sm:text-[10px] text-white/60 font-normal mt-1 leading-none">
+                                <span className="block text-[9px] sm:text-[11px] text-white/60 font-normal mt-1 leading-none">
                                     2023
                                 </span>
                                 <span className="block text-[21px] sm:text-[24px] font-poppins font-bold text-white mt-2 leading-none">
@@ -245,9 +245,9 @@ export default function GrowthManageSection() {
                                 </div>
                             </div>
 
-                            <div className="absolute top-[120px] sm:top-[140px] right-6 sm:right-12 w-[125px] sm:w-[155px] z-10 pointer-events-none animate-float-reverse">
+                            <div className="absolute top-[120px] sm:top-[120px] right-5 w-[125px] sm:w-[210px] z-50 pointer-events-none">
                                 <Image
-                                    src="/images/patterns/pattern-1.png"
+                                    src="/images/patterns/pattern-8.png"
                                     alt="Decorative Lime 3D Spiral"
                                     width={155}
                                     height={155}
@@ -255,18 +255,18 @@ export default function GrowthManageSection() {
                                 />
                             </div>
 
-                            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[350px] sm:w-[410px] md:w-[440px] z-20 pointer-events-none">
+                            <div className="absolute top-0 left-80 -translate-x-1/2 w-[350px] sm:w-[420px] md:w-[550px] z-20 pointer-events-none">
                                 <Image
                                     src="/images/create-course-girl.png"
                                     alt="Instructor creating course"
-                                    width={440}
-                                    height={540}
+                                    width={530}
+                                    height={640}
                                     priority
                                     className="w-full h-auto object-contain block"
                                 />
                             </div>
 
-                            <div className="absolute bottom-6 sm:bottom-8 right-0 sm:right-4 md:right-6 z-30 bg-white/95 backdrop-blur-md rounded-[22px] p-3.5 sm:p-4 shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-white/80 min-w-[220px] sm:min-w-[250px] animate-float-medium">
+                            <div className="absolute bottom-6 sm:bottom-16 right-0 z-30 bg-white/95 backdrop-blur-md rounded-[22px] p-3.5 sm:p-4 shadow-[0_16px_36px_rgba(0,0,0,0.12)] border border-white/80 min-w-[220px] sm:min-w-[250px]">
                                 <span className="block text-[13px] sm:text-[14px] font-poppins font-semibold text-[#111111] leading-none">
                                     Happy Students
                                 </span>

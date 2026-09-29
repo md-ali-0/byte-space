@@ -36,7 +36,7 @@ const brands = [
 export default function BrandSection() {
     return (
         <section
-            className="w-full bg-[#F5F5F6] py-12 sm:py-16 lg:pt-[81px] lg:pb-[80px] select-none"
+            className="w-full bg-[#F5F5F6] py-12 sm:py-16 lg:pt-20.25 lg:pb-20 select-none"
             aria-label="Trusted brands"
         >
             <div className="w-full container-page mx-auto px-6 xl:px-0">

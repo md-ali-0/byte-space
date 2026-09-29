@@ -4,28 +4,28 @@ import Image from "next/image";
 
 export default function CreatorCtaSection() {
     return (
-        <section className="relative w-full bg-[#003BE2] overflow-hidden select-none hero-grid-pattern py-20 lg:py-[115px]">
+        <section className="relative w-full bg-[#003BE2] overflow-hidden select-none hero-grid-pattern py-20 lg:py-28.75">
             <div
-                className="absolute z-10 animate-float-slow pointer-events-none hidden lg:block"
+                className="absolute z-10 pointer-events-none hidden lg:block"
                 style={{
-                    top: "-55px",
-                    left: "calc(50% - 720px - 45px)",
+                    top: "0px",
+                    left: "calc(50% - 720px - 25px)",
                 }}
             >
                 <Image
-                    src="/images/patterns/pattern-6-lime.png"
+                    src="/images/patterns/pattern-6-lime-v1.png"
                     alt="Decorative Lime 3D Spiral"
                     width={320}
                     height={320}
-                    className="w-[220px] lg:w-[280px] h-auto drop-shadow-[0_16px_28px_rgba(0,0,0,0.22)] -rotate-[75deg]"
+                    className="w-55 lg:w-70 h-auto drop-shadow-[0_16px_28px_rgba(0,0,0,0.22)]"
                 />
             </div>
 
             <div
-                className="absolute z-10 animate-float-medium pointer-events-none hidden xl:block"
+                className="absolute z-10 pointer-events-none hidden xl:block"
                 style={{
-                    top: "38px",
-                    left: "calc(50% - 720px + 235px)",
+                    top: "15px",
+                    left: "calc(50% - 720px + 180px)",
                 }}
             >
                 <Image
@@ -33,30 +33,30 @@ export default function CreatorCtaSection() {
                     alt="Decorative White 3D Coil"
                     width={150}
                     height={150}
-                    className="w-[90px] lg:w-[115px] h-auto drop-shadow-[0_12px_24px_rgba(0,0,0,0.2)] -rotate-[24deg]"
+                    className="w-22.5 lg:w-41.25 h-auto drop-shadow-[0_12px_24px_rgba(0,0,0,0.2)]"
                 />
             </div>
 
             <div
-                className="absolute z-10 animate-float-slow pointer-events-none hidden lg:block"
+                className="absolute z-10 pointer-events-none hidden lg:block"
                 style={{
                     bottom: "85px",
-                    left: "calc(50% - 720px - 10px)",
+                    left: "calc(50% - 720px - 25px)",
                 }}
             >
                 <Image
-                    src="/images/patterns/pattern-3.png"
+                    src="/images/patterns/pattern-7-lime-white.png"
                     alt="Decorative White 3D Pyramid"
                     width={160}
                     height={160}
-                    className="w-[105px] lg:w-[140px] h-auto drop-shadow-[0_16px_28px_rgba(0,0,0,0.22)] -rotate-[16deg]"
+                    className="w-26.25 lg:w-35 h-auto drop-shadow-[0_16px_28px_rgba(0,0,0,0.22)]"
                 />
             </div>
 
             <div
-                className="absolute z-10 animate-float-reverse pointer-events-none hidden lg:block"
+                className="absolute z-10 pointer-events-none hidden lg:block"
                 style={{
-                    bottom: "-65px",
+                    bottom: "-145px",
                     left: "calc(50% - 720px + 60px)",
                 }}
             >
@@ -65,15 +65,15 @@ export default function CreatorCtaSection() {
                     alt="Decorative Lime 3D Torus"
                     width={340}
                     height={340}
-                    className="w-[220px] lg:w-[310px] h-auto drop-shadow-[0_20px_36px_rgba(0,0,0,0.25)] rotate-[2deg]"
+                    className="w-55 lg:w-82.5 h-auto drop-shadow-[0_20px_36px_rgba(0,0,0,0.25)] "
                 />
             </div>
 
             <div
-                className="absolute z-10 animate-float-slow pointer-events-none hidden xl:block"
+                className="absolute z-10 pointer-events-none hidden xl:block"
                 style={{
-                    top: "32px",
-                    left: "calc(50% + 375px)",
+                    top: "25px",
+                    left: "calc(50% + 370px)",
                 }}
             >
                 <Image
@@ -81,31 +81,31 @@ export default function CreatorCtaSection() {
                     alt="Decorative Lime 3D Pyramid"
                     width={150}
                     height={150}
-                    className="w-[100px] lg:w-[130px] h-auto drop-shadow-[0_16px_28px_rgba(0,0,0,0.22)] rotate-[8deg]"
+                    className="w-25 lg:w-45 h-auto drop-shadow-[0_16px_28px_rgba(0,0,0,0.22)]"
                 />
             </div>
 
             <div
-                className="absolute z-10 animate-float-medium pointer-events-none hidden lg:block"
+                className="absolute z-10 pointer-events-none hidden lg:block"
                 style={{
                     top: "20px",
-                    left: "calc(50% + 530px)",
+                    left: "calc(50% + 565px)",
                 }}
             >
                 <Image
-                    src="/images/patterns/pattern-2-white.png"
+                    src="/images/patterns/pattern-2-white-v1.png"
                     alt="Decorative White 3D Cylinder"
                     width={320}
                     height={320}
-                    className="w-[200px] lg:w-[280px] h-auto drop-shadow-[0_20px_36px_rgba(0,0,0,0.22)] rotate-[2deg]"
+                    className="w-50 lg:w-47.5 h-auto drop-shadow-[0_20px_36px_rgba(0,0,0,0.22)] "
                 />
             </div>
 
             <div
-                className="absolute z-10 animate-float-reverse pointer-events-none hidden lg:block"
+                className="absolute z-10 pointer-events-none hidden lg:block"
                 style={{
-                    bottom: "-38px",
-                    left: "calc(50% + 440px)",
+                    bottom: "-110px",
+                    left: "calc(50% + 350px)",
                 }}
             >
                 <Image
@@ -113,17 +113,17 @@ export default function CreatorCtaSection() {
                     alt="Decorative Lime 3D Coil"
                     width={230}
                     height={230}
-                    className="w-[140px] lg:w-[200px] h-auto drop-shadow-[0_16px_28px_rgba(0,0,0,0.2)] -rotate-[4deg]"
+                    className="w-35 lg:w-75 h-auto drop-shadow-[0_16px_28px_rgba(0,0,0,0.2)]"
                 />
             </div>
 
-            <div className="relative z-20 max-w-[960px] mx-auto px-6 sm:px-8 text-center flex flex-col items-center">
-                <h2 className="font-poppins font-semibold text-white text-[30px] sm:text-[38px] md:text-[42px] lg:text-[44px] leading-[1.18] tracking-tight max-w-[720px]">
+            <div className="relative z-20 max-w-240 mx-auto px-6 sm:px-8 text-center flex flex-col items-center">
+                <h2 className="font-poppins font-semibold text-white text-[30px] sm:text-[38px] md:text-[42px] lg:text-[44px] leading-[1.18] tracking-tight max-w-180">
                     Unlock Your Potential as a <br className="hidden sm:inline" />
                     Creator with ByteSpace
                 </h2>
 
-                <p className="mt-4 md:mt-5 text-[#E5E6E8] text-[14px] sm:text-[15px] lg:text-[16px] leading-[160%] font-normal max-w-[840px]">
+                <p className="mt-4 md:mt-5 text-[#E5E6E8] text-[14px] sm:text-[15px] lg:text-[16px] leading-[160%] font-normal max-w-210">
                     Experience the collaboration of numerous creators and an expanding selection of courses. Register now and become a part of a community comprising over 10,000 local and international creators. Utilize our Course Editor, and showcase your expertise by publishing your finest course on the ByteSpace Course Library.
                 </p>
 
