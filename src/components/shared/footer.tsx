@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const linkColumns = [
     {
@@ -43,6 +44,16 @@ const legalLinks = [
 ];
 
 export default function Footer() {
+    const pathname = usePathname();
+    const isAuthPage =
+        pathname?.startsWith("/register") ||
+        pathname?.startsWith("/signup") ||
+        pathname?.startsWith("/login");
+
+    if (isAuthPage) {
+        return null;
+    }
+
     return (
         <footer className="w-full bg-white select-none">
             <div className="container-page pt-16 lg:pt-[70px] pb-10 lg:pb-[44px]">
