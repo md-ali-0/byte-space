@@ -67,7 +67,7 @@ export default function GrowthManageSection() {
                 />
             </div>
 
-            <div className="container-page relative z-10 pt-10 sm:pt-14 lg:pt-16 pb-0">
+            <div className="container-page relative z-10 pt-10 sm:pt-14 lg:pt-16 pb-20 sm:pb-24 lg:pb-32">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
                     <div className="lg:col-span-6 flex flex-col justify-center">
                         <h2 className="font-poppins font-semibold text-[#111111] text-[34px] sm:text-[40px] lg:text-[46px] leading-[1.16] tracking-[-0.02em] max-w-[540px]">
