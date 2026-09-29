@@ -1,3 +1,4 @@
+import Footer from "@/components/shared/footer";
 import Navbar from "@/components/shared/navbar";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
@@ -37,6 +38,7 @@ export default function RootLayout({
             <body className="min-h-full flex flex-col font-sans">
                 <Navbar />
                 {children}
+                <Footer />
             </body>
         </html>
     );

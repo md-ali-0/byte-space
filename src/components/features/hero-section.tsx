@@ -17,11 +17,7 @@ const studentAvatars = [
 export default function HeroSection() {
     return (
         <section className="relative w-full bg-[#003BE2] overflow-hidden min-h-[820px] lg:h-[830px] hero-grid-pattern select-none">
-            {/* 1440px Centered Stage */}
             <div className="relative w-full max-w-[1440px] h-full min-h-[820px] lg:h-[830px] mx-auto">
-                {/* ============================================================== */}
-                {/* 1. GIANT NEON LIME HALO RING (Figma: Ellipse 7)                 */}
-                {/* ============================================================== */}
                 <div
                     className="absolute left-1/2 -translate-x-1/2 pointer-events-none rounded-full hidden sm:block"
                     style={{
@@ -46,11 +42,6 @@ export default function HeroSection() {
                     aria-hidden="true"
                 />
 
-                {/* ============================================================== */}
-                {/* 2. 3D FLOATING ORNAMENTS (Real Patterns from Figma)             */}
-                {/* ============================================================== */}
-
-                {/* Pattern 1: Top-Left Lime Spiral */}
                 <div
                     className="absolute z-10 pointer-events-none"
                     style={{
@@ -68,7 +59,6 @@ export default function HeroSection() {
                     />
                 </div>
 
-                {/* Pattern 5: Mid-Left White Wavy Coil */}
                 <div
                     className="absolute z-10 pointer-events-none"
                     style={{
@@ -86,7 +76,6 @@ export default function HeroSection() {
                     />
                 </div>
 
-                {/* Pattern 4: Bottom-Left White Torus / Donut */}
                 <div
                     className="absolute z-10 pointer-events-none"
                     style={{
@@ -104,7 +93,6 @@ export default function HeroSection() {
                     />
                 </div>
 
-                {/* Pattern 2: Top-Right Lime Cylinder / Cone */}
                 <div
                     className="absolute z-10 pointer-events-none"
                     style={{
@@ -140,7 +128,6 @@ export default function HeroSection() {
                     />
                 </div>
 
-                {/* Pattern 6: Bottom-Right White Spring Coil */}
                 <div
                     className="absolute z-10 pointer-events-none"
                     style={{
@@ -158,30 +145,25 @@ export default function HeroSection() {
                     />
                 </div>
 
-                {/* ============================================================== */}
-                {/* 3. HERO CONTENT: HEADING, SUBTITLE, SEARCH BAR                  */}
-                {/* ============================================================== */}
                 <div
                     className="relative z-20 flex flex-col items-center text-center px-4"
                     style={{ paddingTop: "32px" }}
                 >
-                    {/* Heading: Poppins, 600, 72px */}
+
                     <h1 className="font-poppins font-semibold text-white text-[32px] sm:text-[46px] md:text-[58px] lg:text-[68px] xl:text-[72px] leading-[1.12] sm:leading-[1.16] lg:leading-[118%] tracking-[-0.01em] max-w-[935px]">
                         Get Access to Hundreds <br className="hidden sm:inline" />
                         Courses Available
                     </h1>
 
-                    {/* Subtitle: 18px, #E5E6E8 */}
                     <p className="mt-3 md:mt-4 text-[#E5E6E8] text-[15px] sm:text-[17px] md:text-[18px] leading-[160%] max-w-[819px] font-normal px-2">
                         Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses.
                     </p>
 
-                    {/* Search Bar */}
                     <form
                         onSubmit={(e) => e.preventDefault()}
                         className="mt-5 md:mt-6 flex flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-[581px]"
                     >
-                        {/* White Input Pill */}
+
                         <div className="flex-1 flex items-center gap-3 bg-white rounded-[24px] px-5 sm:px-6 h-[50px] md:h-[52px] shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all focus-within:ring-2 focus-within:ring-[#D4FB20]">
                             <FiSearch className="text-[#82868E] text-[20px] md:text-[22px] shrink-0" />
                             <input
@@ -191,7 +173,6 @@ export default function HeroSection() {
                             />
                         </div>
 
-                        {/* Lime Search Button: 104px x 46px */}
                         <Button
                             type="submit"
                             className="!w-[96px] sm:!w-[104px] !h-[46px] sm:!h-[50px] !px-0 rounded-[24px] text-[16px] sm:text-[18px] font-medium bg-[#D4FB20] text-[#242528] hover:bg-[#c4ea1b] shrink-0 shadow-[0_4px_16px_rgba(212,251,32,0.35)]"
@@ -201,9 +182,6 @@ export default function HeroSection() {
                     </form>
                 </div>
 
-                {/* ============================================================== */}
-                {/* 4. CENTRAL STUDENT IMAGE                                        */}
-                {/* ============================================================== */}
                 <div
                     className="absolute left-1/2 -translate-x-1/2 z-20 pointer-events-none"
                     style={{
@@ -222,11 +200,6 @@ export default function HeroSection() {
                     />
                 </div>
 
-                {/* ============================================================== */}
-                {/* 5. FLOATING GLASS METRICS CARDS                                 */}
-                {/* ============================================================== */}
-
-                {/* Card 1: UI/UX Design (Left of Student) */}
                 <div
                     className="absolute z-30 bg-white rounded-[16px] p-3.5 sm:p-4 shadow-[0_16px_36px_rgba(0,0,0,0.14)] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer text-left"
                     style={{
@@ -247,7 +220,6 @@ export default function HeroSection() {
                     </div>
                 </div>
 
-                {/* Card 2: Happy Students (Bottom-Left of Student) */}
                 <div
                     className="absolute z-30 bg-white rounded-[16px] p-3.5 sm:p-4 shadow-[0_16px_36px_rgba(0,0,0,0.14)] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer text-left"
                     style={{
@@ -258,7 +230,6 @@ export default function HeroSection() {
                         backdropFilter: "blur(10px)",
                     }}
                 >
-                    {/* Top Row: Title + Rating */}
                     <div className="flex items-center justify-between mb-1.5">
                         <span className="text-[16px] font-medium text-[#242528] leading-[19px]">
                             Happy Students
@@ -272,8 +243,6 @@ export default function HeroSection() {
                             </div>
                         </div>
                     </div>
-
-                    {/* Bottom Row: Overlapping Avatars (43px x 43px, -16px margin) + 2K+ */}
                     <div className="flex items-center mt-2">
                         {studentAvatars.map((src, i) => (
                             <div
@@ -291,14 +260,12 @@ export default function HeroSection() {
                                 />
                             </div>
                         ))}
-                        {/* 2K+ Green Pill Badge */}
                         <div className="-ml-3.5 size-10 rounded-full bg-[#D4FB20] text-[#242528] text-[12px] font-bold flex items-center justify-center border-2 border-white shadow-xs shrink-0 z-10">
                             2K+
                         </div>
                     </div>
                 </div>
 
-                {/* Card 3: Learning Progress (Right of Student) */}
                 <div
                     className="absolute z-30 bg-white rounded-[16px] p-4 shadow-[0_16px_36px_rgba(0,0,0,0.14)] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer text-left"
                     style={{
@@ -315,7 +282,6 @@ export default function HeroSection() {
                     <div className="text-[44px] sm:text-[48px] font-semibold font-poppins text-[#242528] leading-[54px] tracking-[-0.01em] my-0.5">
                         55%
                     </div>
-                    {/* Progress Bar (200px width x 8px height, 112px fill) */}
                     <div className="w-[200px] h-[8px] bg-[#F6F6F6] rounded-[24px] overflow-hidden mt-1.5">
                         <div
                             className="h-[8px] bg-[#D4FB20] rounded-[24px] transition-all duration-1000 ease-out"

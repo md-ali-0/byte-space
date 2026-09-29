@@ -84,104 +84,106 @@
     --font-sans: var(--font-body);
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+@layer base {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
 
-html {
-    scroll-behavior: smooth;
-}
+    html {
+        scroll-behavior: smooth;
+    }
 
-html,
-body {
-    min-height: 100%;
-}
+    html,
+    body {
+        min-height: 100%;
+    }
 
-body {
-    margin: 0;
-    background: var(--background);
-    color: var(--foreground);
-    font-family: var(--font-body);
-    font-size: 16px;
-    line-height: 1.5;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+    body {
+        margin: 0;
+        background: var(--background);
+        color: var(--foreground);
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 1.5;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+    }
 
-p {
-    margin: 0;
-}
+    p {
+        margin: 0;
+    }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 
-button,
-input,
-textarea,
-select {
-    font: inherit;
-}
+    button,
+    input,
+    textarea,
+    select {
+        font: inherit;
+    }
 
-button {
-    cursor: pointer;
-}
+    button {
+        cursor: pointer;
+    }
 
-img,
-svg,
-video {
-    display: block;
-    max-width: 100%;
-}
+    img,
+    svg,
+    video {
+        display: block;
+        max-width: 100%;
+    }
 
-img {
-    height: auto;
-}
+    img {
+        height: auto;
+    }
 
-input,
-textarea,
-select {
-    width: 100%;
-    border: 1px solid var(--border);
-    outline: none;
-    background: var(--surface);
-    color: var(--foreground);
-    transition:
-        border-color 150ms ease,
-        box-shadow 150ms ease,
-        background-color 150ms ease;
-}
+    input,
+    textarea,
+    select {
+        width: 100%;
+        border: 1px solid var(--border);
+        outline: none;
+        background: var(--surface);
+        color: var(--foreground);
+        transition:
+            border-color 150ms ease,
+            box-shadow 150ms ease,
+            background-color 150ms ease;
+    }
 
-input:focus,
-textarea:focus,
-select:focus {
-    border-color: var(--ring);
-    box-shadow: 0 0 0 3px rgb(17 17 17 / 0.08);
-}
+    input:focus,
+    textarea:focus,
+    select:focus {
+        border-color: var(--ring);
+        box-shadow: 0 0 0 3px rgb(17 17 17 / 0.08);
+    }
 
-input::placeholder,
-textarea::placeholder {
-    color: var(--foreground-muted);
-}
+    input::placeholder,
+    textarea::placeholder {
+        color: var(--foreground-muted);
+    }
 
-::selection {
-    background: var(--foreground);
-    color: var(--background);
+    ::selection {
+        background: var(--foreground);
+        color: var(--background);
+    }
 }
 
 * {
