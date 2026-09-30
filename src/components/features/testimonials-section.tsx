@@ -39,39 +39,38 @@ const testimonials: Testimonial[] = [
 
 export default function TestimonialsSection() {
     return (
-        <section className="relative w-full overflow-hidden bg-white select-none py-18 sm:py-22 lg:py-28">
+        <section className="relative w-full overflow-hidden bg-white select-none pt-20 pb-24 sm:pt-24 sm:pb-28 lg:pt-28 lg:pb-32">
             <div
-                className="absolute inset-0 max-w-[1440px] mx-auto pointer-events-none"
+                className="absolute inset-0 max-w-360 mx-auto pointer-events-none"
                 aria-hidden="true"
             >
                 <div
-                    className="absolute top-[20px] right-[-40px] lg:right-[20px] w-[560px] sm:w-[640px] h-[560px] sm:h-[640px] rounded-full blur-[95px]"
+                    className="absolute -top-7.5 -right-15 lg:-right-5 w-165 sm:w-190 lg:w-210 h-165 sm:h-190 lg:h-210 rounded-full blur-[105px] lg:blur-[125px]"
                     style={{
                         background:
-                            "radial-gradient(circle, rgba(212, 251, 32, 0.55) 0%, rgba(212, 251, 32, 0.20) 45%, transparent 70%)",
+                            "radial-gradient(circle, rgba(203, 252, 1, 0.62) 0%, rgba(212, 251, 32, 0.32) 38%, rgba(212, 251, 32, 0.10) 58%, transparent 75%)",
                     }}
                 />
-
                 <div
-                    className="absolute bottom-[-60px] left-[-40px] lg:left-[10px] w-[540px] sm:w-[600px] h-[540px] sm:h-[600px] rounded-full blur-[95px]"
+                    className="absolute -bottom-17.5 -left-17.5 lg:-left-7.5 w-145 sm:w-165 h-145 sm:h-165 rounded-full blur-[105px] lg:blur-[120px]"
                     style={{
                         background:
-                            "radial-gradient(circle, rgba(0, 59, 226, 0.24) 0%, rgba(0, 59, 226, 0.08) 45%, transparent 70%)",
+                            "radial-gradient(circle, rgba(0, 59, 226, 0.24) 0%, rgba(0, 59, 226, 0.08) 46%, transparent 72%)",
                     }}
                 />
             </div>
 
             <div className="container-page relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-                    <div className="lg:col-span-6 max-w-[500px]">
-                        <h2 className="font-poppins font-semibold text-[#111111] text-[30px] sm:text-[36px] md:text-[40px] lg:text-[44px] leading-[1.2] tracking-[-0.02em]">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-start">
+                    <div className="lg:col-span-6">
+                        <h2 className="font-poppins font-semibold text-[#111111] text-[32px] sm:text-[38px] md:text-[42px] lg:text-[48px] leading-[1.18] tracking-[-0.02em]">
                             Discover What Our <br className="hidden sm:inline" />
                             Community Is Saying
                         </h2>
                     </div>
 
                     <div className="lg:col-span-6 flex lg:justify-end">
-                        <p className="text-[#55575B] text-[13.5px] sm:text-[14.5px] lg:text-[15px] leading-[160%] font-normal max-w-[465px]">
+                        <p className="text-[#55575B] text-[15px] sm:text-[15px]/[28px] font-normal max-w-lg">
                             At ByteSpace, our vibrant community of learners and
                             creators is at the heart of what we do. Hear
                             directly from those who have experienced the
@@ -83,33 +82,31 @@ export default function TestimonialsSection() {
                     </div>
                 </div>
 
-                <div className="mt-12 sm:mt-16 lg:mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7 lg:gap-8 items-stretch">
+                <div className="mt-14 sm:mt-16 lg:mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7 lg:gap-8 items-stretch">
                     {testimonials.map((item) => (
                         <div
                             key={item.id}
-                            className="bg-white rounded-[28px] sm:rounded-[32px] p-6.5 sm:p-7.5 md:p-8 border border-[#E5E6E8]/70 shadow-[0_10px_32px_rgba(0,0,0,0.04)] flex flex-col justify-between hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)] transition-all duration-300"
+                            className="bg-white rounded-[28px] sm:rounded-4xl p-7 sm:p-8 lg:p-9 border border-[#EFEFF1] shadow-[0_6px_28px_rgba(0,0,0,0.035)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-fit"
                         >
                             <div>
-                                <div className="relative w-[56px] h-[56px] rounded-full overflow-hidden shadow-xs">
+                                <div className="relative w-15 h-15 sm:w-15.5 sm:h-15.5 rounded-full overflow-hidden shrink-0">
                                     <Image
                                         src={item.avatar}
                                         alt={item.name}
                                         fill
-                                        sizes="56px"
+                                        sizes="62px"
                                         className="object-cover"
                                     />
                                 </div>
-
-                                <div className="mt-5.5">
-                                    <h3 className="font-poppins font-semibold text-[17px] sm:text-[18px] text-[#111111] leading-snug">
+                                <div className="mt-6">
+                                    <h3 className="font-poppins font-semibold text-[18px] sm:text-[19px] text-[#111111] leading-tight">
                                         {item.name}
                                     </h3>
-                                    <p className="mt-1 text-[13px] sm:text-[14px] font-normal text-[#003BE2]">
+                                    <p className="mt-1.5 text-[14px] font-normal text-[#003BE2] leading-none">
                                         {item.role}
                                     </p>
                                 </div>
-
-                                <p className="mt-5 sm:mt-6 text-[#55575B] text-[13.5px] sm:text-[14px] leading-[165%] font-normal">
+                                <p className="mt-6 sm:mt-7 text-[#52525B] text-[16.5px]/[28px] font-normal">
                                     &quot;{item.quote}&quot;
                                 </p>
                             </div>

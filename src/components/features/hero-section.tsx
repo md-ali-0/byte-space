@@ -16,8 +16,8 @@ const studentAvatars = [
 
 export default function HeroSection() {
     return (
-        <section className="relative w-full bg-[#003BE2] overflow-hidden min-h-[820px] lg:h-[830px] hero-grid-pattern select-none">
-            <div className="relative w-full max-w-[1440px] h-full min-h-[820px] lg:h-[830px] mx-auto">
+        <section className="relative w-full bg-[#003BE2] overflow-hidden min-h-205 lg:h-207.5 hero-grid-pattern select-none">
+            <div className="relative w-full max-w-360 h-full min-h-205 lg:h-207.5 mx-auto">
                 <div
                     className="absolute left-1/2 -translate-x-1/2 pointer-events-none rounded-full hidden sm:block"
                     style={{
@@ -55,7 +55,7 @@ export default function HeroSection() {
                         width={385}
                         height={385}
                         priority
-                        className="w-[220px] sm:w-[250px] md:w-[280px] h-auto drop-shadow-[0_16px_28px_rgba(0,0,0,0.22)]"
+                        className="w-55 sm:w-62.5 md:w-70 h-auto drop-shadow-[0_16px_28px_rgba(0,0,0,0.22)]"
                     />
                 </div>
 
@@ -72,7 +72,7 @@ export default function HeroSection() {
                         width={180}
                         height={180}
                         priority
-                        className="w-[120px] sm:w-[150px] md:w-[180px] h-auto drop-shadow-[0_16px_28px_rgba(0,0,0,0.2)]"
+                        className="w-30 sm:w-37.5 md:w-45 h-auto drop-shadow-[0_16px_28px_rgba(0,0,0,0.2)]"
                     />
                 </div>
 
@@ -89,7 +89,7 @@ export default function HeroSection() {
                         width={180}
                         height={180}
                         priority
-                        className="w-[120px] sm:w-[145px] md:w-[350px] h-auto drop-shadow-[0_20px_36px_rgba(0,0,0,0.25)]"
+                        className="w-30 sm:w-36.25 md:w-87.5 h-auto drop-shadow-[0_20px_36px_rgba(0,0,0,0.25)]"
                     />
                 </div>
 
@@ -106,7 +106,7 @@ export default function HeroSection() {
                         width={290}
                         height={290}
                         priority
-                        className="w-[160px] sm:w-[210px] md:w-[210px] h-auto drop-shadow-[0_16px_28px_rgba(0,0,0,0.22)]"
+                        className="w-40 sm:w-52.5 md:w-52.5 h-auto drop-shadow-[0_16px_28px_rgba(0,0,0,0.22)]"
                     />
                 </div>
 
@@ -124,7 +124,7 @@ export default function HeroSection() {
                         width={170}
                         height={170}
                         priority
-                        className="w-[100px] sm:w-[130px] md:w-[150px] lg:w-[170px] h-auto drop-shadow-[0_16px_32px_rgba(0,0,0,0.22)]"
+                        className="w-25 sm:w-32.5 md:w-37.5 h-auto drop-shadow-[0_16px_32px_rgba(0,0,0,0.22)]"
                     />
                 </div>
 
@@ -141,7 +141,7 @@ export default function HeroSection() {
                         width={180}
                         height={180}
                         priority
-                        className="w-[105px] sm:w-[130px] md:w-[280px] h-auto drop-shadow-[0_16px_28px_rgba(0,0,0,0.2)]"
+                        className="w-26.25 sm:w-32.5 md:w-70 h-auto drop-shadow-[0_16px_28px_rgba(0,0,0,0.2)]"
                     />
                 </div>
 
@@ -150,32 +150,32 @@ export default function HeroSection() {
                     style={{ paddingTop: "32px" }}
                 >
 
-                    <h1 className="font-poppins font-semibold text-white text-[32px] sm:text-[46px] md:text-[58px] lg:text-[68px] xl:text-[72px] leading-[1.12] sm:leading-[1.16] lg:leading-[118%] tracking-[-0.01em] max-w-[935px]">
+                    <h1 className="font-poppins font-semibold text-white text-[32px] sm:text-[46px] md:text-[58px] lg:text-[68px] xl:text-[72px] leading-[1.12] sm:leading-[1.16] lg:leading-[118%] tracking-[-0.01em] max-w-233.75">
                         Get Access to Hundreds <br className="hidden sm:inline" />
                         Courses Available
                     </h1>
 
-                    <p className="mt-3 md:mt-4 text-[#E5E6E8] text-[15px] sm:text-[17px] md:text-[18px] leading-[160%] max-w-[819px] font-normal px-2">
+                    <p className="mt-3 md:mt-4 text-[#E5E6E8] text-[15px] sm:text-[17px] md:text-[18px] leading-[160%] max-w-204.75 font-normal px-2">
                         Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses.
                     </p>
 
                     <form
                         onSubmit={(e) => e.preventDefault()}
-                        className="mt-5 md:mt-6 flex flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-[581px]"
+                        className="mt-5 md:mt-6 flex flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-145.25"
                     >
 
-                        <div className="flex-1 flex items-center gap-3 bg-white rounded-[24px] px-5 sm:px-6 h-[50px] md:h-[52px] shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all focus-within:ring-2 focus-within:ring-[#D4FB20]">
+                        <div className="flex-1 flex items-center gap-3 bg-white rounded-3xl px-5 sm:px-6 h-12.5 md:h-13 shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all focus-within:ring-2 focus-within:ring-[#D4FB20]">
                             <FiSearch className="text-[#82868E] text-[20px] md:text-[22px] shrink-0" />
                             <input
                                 type="text"
                                 placeholder="Course, topic, creator"
-                                className="w-full !border-0 !outline-none !shadow-none !bg-transparent text-[#242528] placeholder-[#82868E] text-[15px] md:text-[17px] font-normal"
+                                className="w-full border-0! outline-0! shadow-0! bg-transparent text-[#242528] placeholder-[#82868E] text-[15px] md:text-[17px] font-normal"
                             />
                         </div>
 
                         <Button
                             type="submit"
-                            className="!w-[96px] sm:!w-[104px] !h-[46px] sm:!h-[50px] !px-0 rounded-[24px] text-[16px] sm:text-[18px] font-medium bg-[#D4FB20] text-[#242528] hover:bg-[#c4ea1b] shrink-0 shadow-[0_4px_16px_rgba(212,251,32,0.35)]"
+                            className="w-24 sm:w-26 h-12.5 sm:h-13 px-0 rounded-3xl text-[16px] sm:text-[18px] font-medium bg-[#D4FB20] text-[#242528] hover:bg-[#c4ea1b] shrink-0 shadow-[0_4px_16px_rgba(212,251,32,0.35)]"
                         >
                             Search
                         </Button>
@@ -210,10 +210,10 @@ export default function HeroSection() {
                         backdropFilter: "blur(10px)",
                     }}
                 >
-                    <h2 className="text-[16px] font-medium text-[#242528] leading-[19px]">
+                    <h2 className="text-[16px] font-medium text-[#242528] leading-4.75">
                         UI/UX Design
                     </h2>
-                    <div className="flex items-center gap-1.5 mt-1 text-[12px] text-[#82868E] leading-[19px]">
+                    <div className="flex items-center gap-1.5 mt-1 text-[12px] text-[#82868E] leading-4.75">
                         <span>200 Courses</span>
                         <span>•</span>
                         <span>1000+ Students</span>
@@ -231,11 +231,11 @@ export default function HeroSection() {
                     }}
                 >
                     <div className="flex items-center justify-between mb-1.5">
-                        <span className="text-[16px] font-medium text-[#242528] leading-[19px]">
+                        <span className="text-[16px] font-medium text-[#242528] leading-4.75">
                             Happy Students
                         </span>
                         <div className="flex items-center gap-1">
-                            <span className="text-[12px] text-[#242528] leading-[19px]">
+                            <span className="text-[12px] text-[#242528] leading-4.75">
                                 4.5 (240)
                             </span>
                             <div className="w-4 h-4 bg-[#D4FB20] rounded-[0.5px] flex items-center justify-center">
@@ -247,9 +247,8 @@ export default function HeroSection() {
                         {studentAvatars.map((src, i) => (
                             <div
                                 key={i}
-                                className={`relative w-[40px] h-[40px] rounded-full border-2 border-white overflow-hidden shadow-xs shrink-0 ${
-                                    i !== 0 ? "-ml-3.5" : ""
-                                }`}
+                                className={`relative w-10 h-10 rounded-full border-2 border-white overflow-hidden shadow-xs shrink-0 ${i !== 0 ? "-ml-3.5" : ""
+                                    }`}
                             >
                                 <Image
                                     src={src}
@@ -276,15 +275,15 @@ export default function HeroSection() {
                         backdropFilter: "blur(10px)",
                     }}
                 >
-                    <span className="text-[14px] font-medium text-[#242528] leading-[17px] block">
+                    <span className="text-[14px] font-medium text-[#242528] leading-4.25 block">
                         Learning Progress
                     </span>
-                    <div className="text-[44px] sm:text-[48px] font-semibold font-poppins text-[#242528] leading-[54px] tracking-[-0.01em] my-0.5">
+                    <div className="text-[44px] sm:text-[48px] font-semibold font-poppins text-[#242528] leading-13.5 tracking-[-0.01em] my-0.5">
                         55%
                     </div>
-                    <div className="w-[200px] h-[8px] bg-[#F6F6F6] rounded-[24px] overflow-hidden mt-1.5">
+                    <div className="w-50 h-2 bg-[#F6F6F6] rounded-3xl overflow-hidden mt-1.5">
                         <div
-                            className="h-[8px] bg-[#D4FB20] rounded-[24px] transition-all duration-1000 ease-out"
+                            className="h-2 bg-[#D4FB20] rounded-3xl transition-all duration-1000 ease-out"
                             style={{ width: "112px" }}
                         />
                     </div>
