@@ -94,3 +94,15 @@ export interface CourseDetails {
     modulesData?: CourseLessonContent;
     reviewsData?: CourseReviewsData;
 }
+
+export interface CreatorProfile {
+    id: string;
+    name: string;
+    badge: string;
+    role: string;
+    avatar: string;
+    bio: string[];
+    productsCount: number;
+    followersCount: number;
+}
+

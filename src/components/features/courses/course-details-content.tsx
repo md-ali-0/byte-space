@@ -6,7 +6,9 @@ import {
     CourseReviewsData,
 } from "@/types/course";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+
 import { AiFillStar } from "react-icons/ai";
 import { FaCirclePlay } from "react-icons/fa6";
 import { FiCheck, FiShare2, FiX } from "react-icons/fi";
@@ -825,9 +827,13 @@ export default function CourseDetailsContent({
                                     Ready to Dive In? Enroll Now and Start
                                     Building Your Digital Future!
                                 </p>
-                                <button
+                                <Link
+                                    href="/creators"
                                     className="
                     mt-6.25
+                    inline-flex
+                    items-center
+                    justify-center
                     border
                     border-[#D1D5DB]
                     hover:border-[#111111]
@@ -842,7 +848,7 @@ export default function CourseDetailsContent({
                 "
                                 >
                                     See Full Profile
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
