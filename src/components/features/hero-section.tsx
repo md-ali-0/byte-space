@@ -16,13 +16,13 @@ const studentAvatars = [
 
 export default function HeroSection() {
     return (
-        <section className="relative w-full bg-[#003BE2] overflow-hidden min-h-205 lg:h-207.5 hero-grid-pattern select-none">
+        <section className="relative w-full bg-[#003BE2] overflow-hidden min-h-205 lg:h-220 hero-grid-pattern select-none">
             <div className="relative w-full max-w-360 h-full min-h-205 lg:h-207.5 mx-auto">
                 <div
                     className="absolute left-1/2 -translate-x-1/2 pointer-events-none rounded-full hidden sm:block"
                     style={{
-                        width: "1120px",
-                        height: "1120px",
+                        width: "1200px",
+                        height: "1200px",
                         top: "420px",
                         border: "300px solid #CBFC01",
                         boxSizing: "border-box",
@@ -72,15 +72,15 @@ export default function HeroSection() {
                         width={180}
                         height={180}
                         priority
-                        className="w-30 sm:w-37.5 md:w-45 h-auto drop-shadow-[0_16px_28px_rgba(0,0,0,0.2)]"
+                        className="w-30 sm:w-37.5 md:w-48 h-auto drop-shadow-[0_16px_28px_rgba(0,0,0,0.2)]"
                     />
                 </div>
 
                 <div
                     className="absolute z-10 pointer-events-none"
                     style={{
-                        top: "500px",
-                        left: "calc(50% - 720px + 30px)",
+                        top: "530px",
+                        left: "calc(50% - 740px)",
                     }}
                 >
                     <Image
@@ -89,7 +89,7 @@ export default function HeroSection() {
                         width={180}
                         height={180}
                         priority
-                        className="w-30 sm:w-36.25 md:w-87.5 h-auto drop-shadow-[0_20px_36px_rgba(0,0,0,0.25)]"
+                        className="w-30 sm:w-36.25 md:w-90 h-auto drop-shadow-[0_20px_36px_rgba(0,0,0,0.25)]"
                     />
                 </div>
 
@@ -131,7 +131,7 @@ export default function HeroSection() {
                     className="absolute z-10 pointer-events-none"
                     style={{
                         top: "550px",
-                        left: "calc(50% + 410px)",
+                        left: "calc(50% + 430px)",
                     }}
                 >
                     <Image
@@ -182,12 +182,7 @@ export default function HeroSection() {
                 </div>
 
                 <div
-                    className="absolute left-1/2 -translate-x-1/2 z-20 pointer-events-none"
-                    style={{
-                        top: "345px",
-                        width: "578px",
-                        height: "541px",
-                    }}
+                    className="absolute right-90 translate z-20 pointer-events-none w-85 sm:w-110 md:w-130 lg:w-144.5 h-80 sm:h-100 md:h-120 lg:h-144.5 top-82.5 sm:top-83.75 md:top-75.25"
                 >
                     <Image
                         src="/images/hero-student-clean.png"
@@ -200,12 +195,12 @@ export default function HeroSection() {
                 </div>
 
                 <div
-                    className="absolute z-30 bg-white rounded-[16px] p-3.5 sm:p-4 shadow-[0_16px_36px_rgba(0,0,0,0.14)] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer text-left"
+                    className="hidden lg:block absolute z-30 bg-white rounded-[16px] p-3.5 sm:p-4 shadow-[0_16px_36px_rgba(0,0,0,0.14)]"
                     style={{
-                        width: "208px",
-                        height: "70px",
-                        left: "calc(50% - 315px)",
-                        top: "450px",
+                        width: "220px",
+                        height: "75px",
+                        left: "calc(50% - 330px)",
+                        top: "480px",
                         backdropFilter: "blur(10px)",
                     }}
                 >
@@ -220,25 +215,25 @@ export default function HeroSection() {
                 </div>
 
                 <div
-                    className="absolute z-30 bg-white rounded-[16px] p-3.5 sm:p-4 shadow-[0_16px_36px_rgba(0,0,0,0.14)] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer text-left"
+                    className="hidden lg:block absolute z-30 bg-white rounded-[16px] p-3.5 sm:p-4 shadow-[0_16px_36px_rgba(0,0,0,0.14)]"
                     style={{
-                        width: "258px",
+                        width: "228px",
                         height: "121px",
-                        left: "calc(50% - 380px)",
-                        top: "600px",
+                        left: "calc(50% - 360px)",
+                        top: "680px",
                         backdropFilter: "blur(10px)",
                     }}
                 >
-                    <div className="flex items-center justify-between mb-1.5">
+                    <div className="flex flex-col gap-1 mb-1.5">
                         <span className="text-[16px] font-medium text-[#242528] leading-4.75">
                             Happy Students
                         </span>
                         <div className="flex items-center gap-1">
                             <span className="text-[12px] text-[#242528] leading-4.75">
-                                4.5 (240)
+                                4.5 <span className="text-gray-500">(240)</span>
                             </span>
-                            <div className="w-4 h-4 bg-[#D4FB20] rounded-[0.5px] flex items-center justify-center">
-                                <AiFillStar className="text-[#242528] text-[11px]" />
+                            <div className="rounded-[0.5px] flex items-center justify-center">
+                                <AiFillStar className="text-[#D4FB20] text-[16px]" />
                             </div>
                         </div>
                     </div>
@@ -265,7 +260,7 @@ export default function HeroSection() {
                 </div>
 
                 <div
-                    className="absolute z-30 bg-white rounded-[16px] p-4 shadow-[0_16px_36px_rgba(0,0,0,0.14)] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer text-left"
+                    className="hidden lg:block absolute z-30 bg-white rounded-[16px] p-4 shadow-[0_16px_36px_rgba(0,0,0,0.14)] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer text-left"
                     style={{
                         width: "232px",
                         height: "131px",

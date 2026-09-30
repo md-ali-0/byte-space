@@ -175,8 +175,8 @@ export default function CreatorProfileContent({
             <main className="w-full bg-white pt-8 sm:pt-10 lg:pt-12 pb-16 sm:pb-24">
                 <div className="container-page">
                     <div className="mx-auto w-full max-w-304">
-                        <div className="flex items-center justify-between gap-4 flex-wrap">
-                            <div className="flex items-center gap-3 sm:gap-4 flex-wrap">
+                        <div className="flex items-center justify-between gap-3 overflow-x-auto no-scrollbar pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 flex-nowrap">
+                            <div className="flex items-center gap-3 sm:gap-4 shrink-0">
                                 <button
                                     type="button"
                                     onClick={resetFilters}

@@ -37,7 +37,7 @@ export default function AuthShowcaseCard({
                 </p>
             </div>
 
-            <div className="relative w-full max-w-123.75 h-123.75 mt-6 sm:mt-8">
+            <div className="hidden lg:block relative w-full max-w-123.75 h-123.75 mt-6 sm:mt-8">
   
                 <div className="absolute top-18.75 left-0 w-83.75 sm:w-86.25 z-10 opacity-95">
                     <CourseCard

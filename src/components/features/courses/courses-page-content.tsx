@@ -189,8 +189,8 @@ export default function CoursesPageContent() {
             <main className="w-full bg-white pt-10 sm:pt-12 pb-16 sm:pb-20">
                 <div className="container-page">
                     <div className="mx-auto w-full max-w-304">
-                        <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-4">
+                        <div className="flex items-center justify-between gap-3 overflow-x-auto no-scrollbar pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 flex-nowrap">
+                            <div className="flex items-center gap-3 sm:gap-4 shrink-0">
                                 <button
                                     type="button"
                                     onClick={resetFilters}
@@ -484,7 +484,7 @@ export default function CoursesPageContent() {
                             </div>
                         </div>
 
-                        <div className="mt-8 flex items-center gap-4 overflow-x-auto no-scrollbar py-0">
+                        <div className="mt-6 sm:mt-8 flex items-center gap-2.5 sm:gap-4 overflow-x-auto no-scrollbar py-1 -mx-4 px-4 sm:mx-0 sm:px-0">
                             {coursePageCategories.map((cat) => (
                                 <button
                                     key={cat}

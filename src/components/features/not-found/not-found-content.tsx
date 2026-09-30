@@ -7,7 +7,7 @@ export default function NotFoundContent() {
         <main className="w-full flex-1 min-h-[calc(100vh-100px)] md:min-h-[calc(100vh-120px)] bg-[#003BE2] hero-grid-pattern text-white flex flex-col items-center justify-center px-4 sm:px-6 py-12 sm:py-16 select-none overflow-hidden font-poppins relative">
                 <div className="relative text-center flex flex-col items-center justify-center max-w-5xl mx-auto w-full">
                     <span
-                        className="font-poppins font-bold text-[220px] sm:text-[300px] md:text-[360px] lg:text-[400px] xl:text-[440px] leading-[0.8] tracking-tight select-none pointer-events-none"
+                        className="font-poppins font-bold text-[150px] sm:text-[260px] md:text-[340px] lg:text-[400px] xl:text-[440px] leading-[0.8] tracking-tight select-none pointer-events-none"
                         style={{
                             background:
                                 "linear-gradient(180deg, #D4FB20 0%, rgba(212, 251, 32, 0.75) 35%, rgba(212, 251, 32, 0.2) 75%, rgba(212, 251, 32, 0.0) 100%)",
@@ -18,7 +18,7 @@ export default function NotFoundContent() {
                         404
                     </span>
 
-                    <h1 className="font-poppins font-bold text-[28px] sm:text-[38px] md:text-[46px] lg:text-[52px] leading-[1.15] text-white tracking-[-0.015em] -mt-14 sm:-mt-20 md:-mt-24 lg:-mt-28 max-w-4xl mx-auto px-4 z-10 text-center">
+                    <h1 className="font-poppins font-bold text-[24px] sm:text-[36px] md:text-[46px] lg:text-[52px] leading-[1.15] text-white tracking-[-0.015em] -mt-10 sm:-mt-16 md:-mt-22 lg:-mt-28 max-w-4xl mx-auto px-4 z-10 text-center">
                         <span className="block sm:whitespace-nowrap">
                             The page you are looking
                         </span>

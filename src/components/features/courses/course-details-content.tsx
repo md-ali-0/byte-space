@@ -264,8 +264,8 @@ export default function CourseDetailsContent({
                     </div>
                 </div>
 
-                <div className="mt-8 sm:mt-11 lg:mt-13 flex flex-col lg:flex-row items-start gap-8 lg:gap-16.5 pb-24">
-                    <div className="w-full lg:w-180 max-w-180 flex-1 min-w-0 flex flex-col">
+                <div className="mt-8 sm:mt-11 lg:mt-13 flex flex-col lg:flex-row items-start gap-8 lg:gap-16.5 pb-16 sm:pb-24">
+                    <div className="w-full lg:w-180 max-w-full lg:max-w-180 flex-1 min-w-0 flex flex-col">
                         <div
                             ref={videoCardRef}
                             className="relative w-full aspect-1440/958 rounded-3xl sm:rounded-[28px] overflow-hidden shadow-2xl bg-[#EAEAEA] border border-white/20 select-none group"
@@ -288,8 +288,8 @@ export default function CourseDetailsContent({
                             </button>
                         </div>
 
-                        <div className="pt-20 sm:pt-24 lg:pt-31.5">
-                            <div className="flex items-center gap-2.5 sm:gap-3">
+                        <div className="pt-10 sm:pt-16 lg:pt-31.5">
+                            <div className="flex items-center gap-2.5 sm:gap-3 overflow-x-auto no-scrollbar py-1">
                                 <button
                                     onClick={() => setActiveTab("about")}
                                     className={`px-5 h-10 rounded-full text-[16px] font-medium transition-all duration-200 cursor-pointer flex items-center justify-center ${
@@ -617,8 +617,8 @@ export default function CourseDetailsContent({
                         </div>
                     </div>
 
-                    <div className="w-full lg:w-103 max-w-103 shrink-0 lg:sticky lg:top-8 z-20">
-                        <div className="bg-white rounded-[26px] border border-[#D9DCE1] p-9.75 shadow-none">
+                    <div className="w-full lg:w-103 max-w-full lg:max-w-103 shrink-0 lg:sticky lg:top-8 z-20">
+                        <div className="bg-white rounded-[26px] border border-[#D9DCE1] p-6 sm:p-8 lg:p-9.75 shadow-none">
                             <h3 className="font-bold text-[#222222] text-[19px] leading-[1.2] tracking-[-0.4px] mb-6.25">
                                 {course.lessonsCount}
                             </h3>
@@ -634,7 +634,7 @@ export default function CourseDetailsContent({
                                                 {lesson.id}
                                             </span>
 
-                                            <span className="max-w-51.25 leading-[1.3]">
+                                            <span className="leading-[1.3] max-w-full lg:max-w-51.25">
                                                 {lesson.title}
                                             </span>
                                         </div>
@@ -653,7 +653,7 @@ export default function CourseDetailsContent({
                                 {course.moreVideosText}
                             </p>
 
-                            <p className="mt-7.5 text-[#5F6368] text-[14px] leading-[1.65] max-w-72.5">
+                            <p className="mt-7.5 text-[#5F6368] text-[14px] leading-[1.65] max-w-none lg:max-w-72.5">
                                 {course.enrollCardBlurb}
                             </p>
 

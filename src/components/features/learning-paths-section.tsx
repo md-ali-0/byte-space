@@ -79,7 +79,7 @@ export default function LearningPathsSection() {
                                 />
                             </div>
 
-                            <span className="mt-4.5 text-[15px] sm:text-[16px] font-medium text-[#111111] group-hover:text-black transition-colors text-center whitespace-nowrap">
+                            <span className="mt-3 sm:mt-4.5 text-[13.5px] sm:text-[15px] lg:text-[16px] font-medium text-[#111111] group-hover:text-black transition-colors text-center px-1">
                                 {cat.name}
                             </span>
                         </Link>
