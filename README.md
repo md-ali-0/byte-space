@@ -6,9 +6,9 @@ A modern, pixel-perfect e-learning web platform built with **Next.js 16 (App Rou
 
 ## 🔗 Links
 
-- **Live Demo:** [Vercel Deployment URL](https://byte-space.vercel.app) *(Replace with your live URL)*
+- **Live Demo:** [https://byte-space-psi.vercel.app](https://byte-space-psi.vercel.app)
 - **Figma Design:** [ByteSpace Figma File](https://www.figma.com/design/26TBgRjmpuxudcErJsHUfy/ByteSpace-New-Check-website?node-id=0-1)
-- **Repository:** [GitHub Repository](https://github.com/md-ali-0/byte-space)
+- **Repository:** [https://github.com/md-ali-0/byte-space](https://github.com/md-ali-0/byte-space)
 
 ---
 
