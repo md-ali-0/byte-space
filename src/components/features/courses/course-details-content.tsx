@@ -1,12 +1,123 @@
 "use client";
 
-import { CourseDetails } from "@/types/course";
+import {
+    CourseDetails,
+    CourseLessonContent,
+    CourseReviewsData,
+} from "@/types/course";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { FaCirclePlay } from "react-icons/fa6";
 import { FiCheck, FiShare2, FiX } from "react-icons/fi";
 import { HiOutlineUsers } from "react-icons/hi2";
+
+const defaultModulesData: CourseLessonContent = {
+    exploreModulesTitle: "Explore the Modules",
+    exploreModulesDescription:
+        "Immerse yourself in the course content as we break down each module into comprehensive lessons, providing practical insights and hands-on experiences.",
+    lessonList: [
+        {
+            id: "1",
+            title: "Module 1: Introduction to Digital Assets",
+            description:
+                "Lay the groundwork with lessons like 'Understanding Digital Elements' and 'Navigating Design Software Tools.' Dive into the essentials of digital asset creation.",
+        },
+        {
+            id: "2",
+            title: "Module 2: Design Principles for Impact",
+            description:
+                "Master the principles that drive impactful designs with lessons such as 'Color Theory in Digital Design' and 'Typography Essentials.' Elevate your visual communication skills.",
+        },
+        {
+            id: "4",
+            title: "Module 4: User-Centric Design Strategies",
+            description:
+                "Understand 'Design Thinking in Digital Creation' and delve into 'User Experience (UX) Essentials.' Craft digital assets with a focus on user-centric design.",
+        },
+        {
+            id: "5",
+            title: "Module 5: Interactive Media and Engagement",
+            description:
+                "Engage your audience with lessons like 'Creating Interactive Presentations' and 'Integrating Multimedia Elements.' Master the art of creating immersive digital experiences.",
+        },
+        {
+            id: "6",
+            title: "Module 6: Project Showcase and Critique",
+            description:
+                "Perfect your presentation skills with 'Effective Presentation Techniques' and embrace collaboration with 'Peer Critique and Collaboration.' Showcase your work with confidence.",
+        },
+        {
+            id: "7",
+            title: "Module 7: Optimizing Digital Assets for Various Platforms",
+            description:
+                "Adapt your digital creations for 'Mobile Platforms' and optimize for 'Social Media.' Ensure widespread accessibility and engagement across diverse digital landscapes.",
+        },
+    ],
+    lessonContentTitle: "Lesson Content",
+    lessonContentDescription:
+        "Engage with each lesson through captivating video content, detailed textual explanations, and interactive elements. Download resources, complete assignments, and test your understanding with quizzes.",
+    progressTrackingTitle: "Lesson Progress Tracking",
+    progressTrackingDescription:
+        "Witness your growth as you complete lessons, with an intuitive progress tracking feature guiding you through your learning journey.",
+    learningProgress: 55,
+};
+
+const defaultReviewsData: CourseReviewsData = {
+    heading: "What Learners Are Saying",
+    description:
+        "Discover what our learners have to say about their experience with 'Build Digital Assets: A Comprehensive Guide.' Read reviews and ratings from individuals who have embarked on the transformative journey of mastering digital asset creation.",
+    averageRating: 4.7,
+    breakdown: [
+        { stars: 5, percentage: 82, count: 720 },
+        { stars: 4, percentage: 32, count: 120 },
+        { stars: 3, percentage: 12, count: 21 },
+        { stars: 2, percentage: 6, count: 12 },
+        { stars: 1, percentage: 8, count: 16 },
+    ],
+    reviews: [
+        {
+            id: "1",
+            userName: "PurePearl Studio",
+            userRole: "UI/UX Designer",
+            userAvatar: "/avatars/reviews/review-1.png",
+            date: "a year ago",
+            rating: 5,
+            comment:
+                "\"The course provided me with a comprehensive understanding of digital asset creation. The lessons were in-depth, practical, and immediately applicable to my work. Highly recommended!\"",
+        },
+        {
+            id: "2",
+            userName: "Albert Flores",
+            userRole: "UI/UX Designer",
+            userAvatar: "/avatars/reviews/review-2.png",
+            date: "a year ago",
+            rating: 5,
+            comment:
+                "\"This course transformed my approach to digital design. The combination of theory, hands-on exercises, and real-world applications made it a truly enriching experience. Excited to implement what I've learned!\"",
+        },
+        {
+            id: "3",
+            userName: "Cody Fisher",
+            userRole: "UI/UX Designer",
+            userAvatar: "/avatars/reviews/review-3.png",
+            date: "a year ago",
+            rating: 5,
+            comment:
+                "\"The project showcase and critique module created a collaborative environment where I could showcase my work, receive valuable feedback, and refine my skills. It added a unique and valuable dimension to the learning process.\"",
+        },
+        {
+            id: "4",
+            userName: "Brooklyn Simmons",
+            userRole: "UI/UX Designer",
+            userAvatar: "/avatars/reviews/review-4.png",
+            date: "a year ago",
+            rating: 5,
+            comment:
+                "\"The lessons on optimizing digital assets for various platforms were particularly insightful. The course adapts to the evolving digital landscape, and the engaging content kept me motivated throughout.\"",
+        },
+    ],
+};
 
 interface CourseDetailsContentProps {
     course: CourseDetails;
@@ -18,9 +129,15 @@ export default function CourseDetailsContent({
     const [activeTab, setActiveTab] = useState<"about" | "lessons" | "reviews">(
         "about",
     );
+    const [selectedRatingFilter, setSelectedRatingFilter] = useState<
+        number | "all"
+    >("all");
     const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
     const [shareToast, setShareToast] = useState(false);
     const [heroBgHeight, setHeroBgHeight] = useState<number | null>(null);
+
+    const modulesData = course.modulesData || defaultModulesData;
+    const reviewsData = course.reviewsData || defaultReviewsData;
 
     const mainRef = useRef<HTMLElement>(null);
     const videoCardRef = useRef<HTMLDivElement>(null);
@@ -189,7 +306,7 @@ export default function CourseDetailsContent({
                                             : "bg-[#F4F4F6] text-[#414244] hover:bg-[#EAEAEA]"
                                     }`}
                                 >
-                                    Lessons
+                                    Lesson
                                 </button>
                                 <button
                                     onClick={() => setActiveTab("reviews")}
@@ -261,60 +378,237 @@ export default function CourseDetailsContent({
                             )}
 
                             {activeTab === "lessons" && (
-                                <div className="mt-8 space-y-4">
-                                    <h2 className="font-bold text-[21px] text-[#111111] mb-2 tracking-tight">
-                                        Curriculum & Lessons
+                                <div className="mt-7 lg:mt-9">
+                                    <h2 className="font-bold text-[22px] sm:text-[24px] text-[#111111] tracking-tight">
+                                        {modulesData.exploreModulesTitle}
                                     </h2>
-                                    <p className="text-[#5F6368] text-[13.5px] mb-5">
-                                        Detailed breakdown of all 112 modules
-                                        included in this masterclass.
+                                    <p className="text-[#5F6368] text-[15px] sm:text-[16px] leading-[1.65] mt-3">
+                                        {modulesData.exploreModulesDescription}
                                     </p>
-                                    <div className="border border-[#E5E7EB] rounded-[20px] divide-y divide-[#E5E7EB] overflow-hidden">
-                                        {course.sampleLessons.map((item) => (
+
+                                    <h3 className="font-bold text-[20px] text-[#111111] tracking-tight mt-8 sm:mt-10 mb-6 sm:mb-7">
+                                        Lesson List
+                                    </h3>
+
+                                    <div className="space-y-6 sm:space-y-7">
+                                        {modulesData.lessonList.map((module) => (
                                             <div
-                                                key={item.id}
-                                                className="flex items-center justify-between p-4 sm:p-4.5 hover:bg-gray-50 transition-colors"
+                                                key={module.id}
+                                                className="flex items-start gap-4 sm:gap-5"
                                             >
-                                                <div className="flex items-center gap-3.5">
-                                                    <span className="w-7 h-7 rounded-full bg-[#003BE2]/10 text-[#003BE2] font-semibold text-[12.5px] flex items-center justify-center">
-                                                        {item.id}
-                                                    </span>
-                                                    <span className="font-medium text-[#111111] text-[13.5px]">
-                                                        {item.title}
-                                                    </span>
+                                                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-[18px] sm:rounded-[20px] bg-[#D4FB20] flex items-center justify-center shrink-0 shadow-2xs">
+                                                    <svg
+                                                        className="w-6 h-6 sm:w-7 sm:h-7 text-[#111111]"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <rect
+                                                            x="2"
+                                                            y="6"
+                                                            width="12.5"
+                                                            height="12"
+                                                            rx="2"
+                                                            stroke="currentColor"
+                                                            strokeWidth="2.5"
+                                                            strokeLinejoin="round"
+                                                        />
+                                                        <path
+                                                            d="M14.5 12L21.5 7.5V16.5L14.5 12Z"
+                                                            fill="currentColor"
+                                                        />
+                                                    </svg>
                                                 </div>
-                                                <span className="text-[#003BE2] text-[12.5px] font-medium">
-                                                    {item.duration}
-                                                </span>
+
+                                                <div className="min-w-0 flex-1 pt-0.5">
+                                                    <h4 className="font-bold text-[#111111] text-[16px] sm:text-[17px] leading-snug tracking-tight">
+                                                        {module.title}
+                                                    </h4>
+                                                    <p className="text-[#5F6368] text-[14.5px] sm:text-[15px] leading-[1.6] mt-1.5 font-normal">
+                                                        {module.description}
+                                                    </p>
+                                                </div>
                                             </div>
                                         ))}
-                                        <div className="p-4 sm:p-4.5 bg-[#F9FAFB] text-center text-[#717378] text-[13px]">
-                                            + 99 more lessons available upon
-                                            enrollment
+                                    </div>
+
+                                    <h3 className="font-bold text-[20px] text-[#111111] tracking-tight mt-10 sm:mt-12 mb-3.5">
+                                        {modulesData.lessonContentTitle}
+                                    </h3>
+                                    <p className="text-[#5F6368] text-[15px] sm:text-[16px] leading-[1.65]">
+                                        {modulesData.lessonContentDescription}
+                                    </p>
+
+                                    <h3 className="font-bold text-[20px] text-[#111111] tracking-tight mt-10 sm:mt-12 mb-3.5">
+                                        {modulesData.progressTrackingTitle}
+                                    </h3>
+                                    <p className="text-[#5F6368] text-[15px] sm:text-[16px] leading-[1.65]">
+                                        {modulesData.progressTrackingDescription}
+                                    </p>
+
+                                    <div className="border border-[#D9DCE1] rounded-[22px] sm:rounded-3xl p-6 sm:p-7.5 bg-white mt-6">
+                                        <div className="text-[14.5px] sm:text-[15px] font-medium text-[#111111]">
+                                            Learning Progress
+                                        </div>
+                                        <div className="text-[44px] sm:text-[52px] font-bold text-[#111111] leading-none mt-2.5 mb-6 tracking-tight">
+                                            {modulesData.learningProgress}%
+                                        </div>
+                                        <div className="w-full h-2.5 sm:h-3 bg-[#E5E7EB] rounded-full overflow-hidden">
+                                            <div
+                                                className="h-full bg-[#D4FB20] rounded-full transition-all duration-500"
+                                                style={{
+                                                    width: `${modulesData.learningProgress}%`,
+                                                }}
+                                            />
                                         </div>
                                     </div>
                                 </div>
                             )}
 
                             {activeTab === "reviews" && (
-                                <div className="mt-8">
-                                    <h2 className="font-bold text-[21px] text-[#111111] mb-2 tracking-tight">
-                                        Student Reviews
+                                <div className="mt-7 lg:mt-9">
+                                    <h2 className="font-bold text-[22px] sm:text-[24px] text-[#111111] tracking-tight">
+                                        {reviewsData.heading}
                                     </h2>
-                                    <div className="flex items-center gap-4 p-5 bg-[#F9FAFB] rounded-[20px] mb-6 border border-[#E5E7EB]">
-                                        <span className="text-[34px] font-bold text-[#111111]">
-                                            {course.rating.toFixed(1)}
-                                        </span>
-                                        <div>
-                                            <div className="flex text-[#003BE2] text-[17px]">
-                                                {"★".repeat(5)}
-                                            </div>
-                                            <span className="text-[#717378] text-[12.5px]">
-                                                Course rating based on{" "}
-                                                {course.reviewsCount} verified
-                                                student reviews
+                                    <p className="text-[#5F6368] text-[15px] sm:text-[16px] leading-[1.65] mt-3">
+                                        {reviewsData.description}
+                                    </p>
+
+                                    <div className="border border-[#D9DCE1] rounded-[22px] sm:rounded-3xl p-6 sm:p-8 bg-white mt-7 sm:mt-8 flex flex-col md:flex-row items-center gap-6 sm:gap-8">
+                                        <div className="w-32 h-32 sm:w-37 sm:h-37 rounded-[20px] bg-[#D4FB20] flex flex-col items-center justify-center shrink-0 shadow-2xs">
+                                            <span className="text-[13px] sm:text-[14px] font-medium text-[#111111]">
+                                                Ratings
+                                            </span>
+                                            <span className="text-[44px] sm:text-[50px] font-bold text-[#111111] leading-none mt-1 tracking-tight">
+                                                {reviewsData.averageRating.toFixed(1)}
                                             </span>
                                         </div>
+
+                                        <div className="flex-1 w-full space-y-2.5 sm:space-y-3">
+                                            {reviewsData.breakdown.map((row) => (
+                                                <div
+                                                    key={row.stars}
+                                                    className="flex items-center gap-3 sm:gap-4.5"
+                                                >
+                                                    <div className="flex-1 h-2 sm:h-2.5 bg-[#E5E7EB] rounded-full overflow-hidden relative">
+                                                        <div
+                                                            className="h-full bg-[#D4FB20] rounded-full"
+                                                            style={{
+                                                                width: `${row.percentage}%`,
+                                                            }}
+                                                        />
+                                                    </div>
+
+                                                    <div className="flex items-center gap-0.5 text-[#34373B] shrink-0">
+                                                        {[...Array(5)].map((_, i) => (
+                                                            <AiFillStar
+                                                                key={i}
+                                                                className="text-[15px] sm:text-[16px]"
+                                                            />
+                                                        ))}
+                                                    </div>
+
+                                                    <span className="w-8 sm:w-10 text-right text-[13.5px] sm:text-[14.5px] text-[#5F6368] font-normal shrink-0">
+                                                        {row.count}
+                                                    </span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <h3 className="font-bold text-[19px] sm:text-[20px] text-[#111111] mt-8 sm:mt-10 mb-4 sm:mb-4.5 tracking-tight">
+                                        Individual Reviews:
+                                    </h3>
+
+                                    <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
+                                        <button
+                                            type="button"
+                                            onClick={() =>
+                                                setSelectedRatingFilter("all")
+                                            }
+                                            className={`px-4.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-[14px] sm:text-[15px] transition-all duration-200 cursor-pointer ${
+                                                selectedRatingFilter === "all"
+                                                    ? "bg-[#D4FB20] text-[#111111] font-medium shadow-xs"
+                                                    : "bg-[#F4F4F6] text-[#414244] hover:bg-[#EAEAEA] font-medium"
+                                            }`}
+                                        >
+                                            All rating
+                                        </button>
+                                        {[5, 4, 3, 2, 1].map((ratingNum) => (
+                                            <button
+                                                key={ratingNum}
+                                                type="button"
+                                                onClick={() =>
+                                                    setSelectedRatingFilter(ratingNum)
+                                                }
+                                                className={`px-4 sm:px-4.5 py-2 sm:py-2.5 rounded-full text-[14px] sm:text-[15px] transition-all duration-200 cursor-pointer flex items-center gap-1.5 ${
+                                                    selectedRatingFilter === ratingNum
+                                                        ? "bg-[#D4FB20] text-[#111111] font-medium shadow-xs"
+                                                        : "bg-[#F4F4F6] text-[#414244] hover:bg-[#EAEAEA] font-medium"
+                                                }`}
+                                            >
+                                                <AiFillStar className="text-[14px] text-[#34373B]" />
+                                                <span>{ratingNum}</span>
+                                            </button>
+                                        ))}
+                                    </div>
+
+                                    <div className="space-y-4 sm:space-y-5 mt-6">
+                                        {reviewsData.reviews
+                                            .filter(
+                                                (review) =>
+                                                    selectedRatingFilter === "all" ||
+                                                    review.rating ===
+                                                        selectedRatingFilter,
+                                            )
+                                            .map((review) => (
+                                                <div
+                                                    key={review.id}
+                                                    className="border border-[#D9DCE1] rounded-[22px] sm:rounded-3xl p-6 sm:p-7.5 bg-white space-y-3.5"
+                                                >
+                                                    <div className="flex items-start justify-between gap-3">
+                                                        <div className="flex items-center gap-3.5">
+                                                            <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden shrink-0 border border-black/5">
+                                                                <Image
+                                                                    src={review.userAvatar}
+                                                                    alt={review.userName}
+                                                                    fill
+                                                                    sizes="48px"
+                                                                    className="object-cover"
+                                                                />
+                                                            </div>
+                                                            <div>
+                                                                <h4 className="font-bold text-[#111111] text-[15.5px] sm:text-[16px] leading-tight">
+                                                                    {review.userName}
+                                                                </h4>
+                                                                <p className="text-[#717378] text-[13px] sm:text-[13.5px] mt-0.5">
+                                                                    {review.userRole}
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <span className="text-[#717378] text-[13px] sm:text-[13.5px] font-normal shrink-0">
+                                                            {review.date}
+                                                        </span>
+                                                    </div>
+
+                                                    <div className="flex items-center gap-0.5 text-[#242528]">
+                                                        {[...Array(5)].map((_, i) => (
+                                                            <AiFillStar
+                                                                key={i}
+                                                                className={`text-[16px] sm:text-[17px] ${
+                                                                    i < review.rating
+                                                                        ? "text-[#242528]"
+                                                                        : "text-[#D1D5DB]"
+                                                                }`}
+                                                            />
+                                                        ))}
+                                                    </div>
+
+                                                    <p className="text-[#5F6368] text-[14.5px] sm:text-[15px] leading-[1.65] font-normal">
+                                                        {review.comment}
+                                                    </p>
+                                                </div>
+                                            ))}
                                     </div>
                                 </div>
                             )}
