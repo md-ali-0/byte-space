@@ -18,107 +18,110 @@ export default function LoginForm() {
     };
 
     return (
-        <div className="w-full bg-white rounded-[28px] sm:rounded-[32px] p-7 sm:p-10 md:p-12 shadow-[0_24px_60px_rgba(0,0,0,0.18)]">
-            {/* Header */}
+        <div className="w-full max-w-[580px] bg-[#F3F3F3] rounded-[32px] sm:rounded-[36px] px-8 sm:px-12 lg:px-14 py-10 sm:py-12 shadow-[0_24px_60px_rgba(0,0,0,0.18)] min-h-[720px] flex flex-col justify-between">
+            {/* Header & Inputs */}
             <div>
-                <span className="block text-[13.5px] font-medium text-[#003BE2] mb-1.5">
-                    Sign In
-                </span>
-                <h2 className="font-poppins font-bold text-[32px] sm:text-[38px] text-[#111111] leading-[1.12] tracking-tight">
-                    Welcome Back
-                </h2>
-            </div>
-
-            {/* Form */}
-            <form onSubmit={handleSubmit} className="mt-8 space-y-4">
-                {/* Email */}
+                {/* Header */}
                 <div>
-                    <label
-                        htmlFor="login-email"
-                        className="block text-[13px] font-medium text-[#222222] mb-1.5"
-                    >
-                        Email
-                    </label>
-                    <input
-                        id="login-email"
-                        name="email"
-                        type="email"
-                        inputMode="email"
-                        autoComplete="username"
-                        required
-                        placeholder="designer@example.com"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="w-full h-12 px-4 rounded-[10px] border border-[#E5E7EB] bg-white text-[14.5px] text-[#111111] placeholder:text-[#9CA3AF] focus:border-[#003BE2] focus:ring-1 focus:ring-[#003BE2] transition-colors"
-                    />
+                    <span className="block text-[15px] sm:text-[16px] font-medium text-[#003BE2] mb-1.5">
+                        Sign In
+                    </span>
+                    <h2 className="font-poppins font-bold text-[38px] sm:text-[44px] text-[#111111] leading-tight tracking-[-0.02em]">
+                        Welcome Back
+                    </h2>
                 </div>
 
-                {/* Password */}
-                <div>
-                    <label
-                        htmlFor="current-password"
-                        className="block text-[13px] font-medium text-[#222222] mb-1.5"
-                    >
-                        Password
-                    </label>
-                    <input
-                        id="current-password"
-                        name="password"
-                        type="password"
-                        autoComplete="current-password"
-                        required
-                        placeholder="********"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        className="w-full h-12 px-4 rounded-[10px] border border-[#E5E7EB] bg-white text-[14.5px] text-[#111111] placeholder:text-[#9CA3AF] focus:border-[#003BE2] focus:ring-1 focus:ring-[#003BE2] transition-colors"
-                    />
+                {/* Form */}
+                <form onSubmit={handleSubmit} className="mt-8 sm:mt-9 space-y-5">
+                    {/* Email */}
+                    <div>
+                        <label
+                            htmlFor="login-email"
+                            className="block text-[15px] font-medium text-[#1E2024] mb-2"
+                        >
+                            Email
+                        </label>
+                        <input
+                            id="login-email"
+                            name="email"
+                            type="email"
+                            inputMode="email"
+                            autoComplete="username"
+                            required
+                            placeholder="designer@example.com"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className="w-full h-14 px-5 rounded-[16px] border border-[#DDDEE0] bg-transparent text-[15px] text-[#111111] placeholder:text-[#9CA3AF] focus:bg-white focus:border-[#003BE2] focus:ring-1 focus:ring-[#003BE2] outline-none transition-all"
+                        />
+                    </div>
+
+                    {/* Password */}
+                    <div>
+                        <label
+                            htmlFor="current-password"
+                            className="block text-[15px] font-medium text-[#1E2024] mb-2"
+                        >
+                            Password
+                        </label>
+                        <input
+                            id="current-password"
+                            name="password"
+                            type="password"
+                            autoComplete="current-password"
+                            required
+                            placeholder="********"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            className="w-full h-14 px-5 rounded-[16px] border border-[#DDDEE0] bg-transparent text-[15px] text-[#111111] placeholder:text-[#9CA3AF] focus:bg-white focus:border-[#003BE2] focus:ring-1 focus:ring-[#003BE2] outline-none transition-all"
+                        />
+                    </div>
+
+                    {/* Sign In Button (Aligned to the Right) */}
+                    <div className="flex justify-end pt-3">
+                        <button
+                            type="submit"
+                            disabled={isSubmitting}
+                            className="h-11.5 px-8.5 rounded-full bg-[#CBFC01] hover:bg-[#bbf000] text-[#111111] font-poppins font-semibold text-[15px] flex items-center justify-center transition-all active:scale-[0.98] shadow-xs cursor-pointer disabled:opacity-70"
+                        >
+                            {isSubmitting ? "Signing in..." : "Sign In"}
+                        </button>
+                    </div>
+                </form>
+
+                {/* Divider */}
+                <div className="relative my-7 sm:my-8 flex items-center">
+                    <div className="flex-grow border-t border-[#DDDEE0]" />
+                    <span className="shrink-0 px-4 text-[14px] text-[#82868E]">
+                        or
+                    </span>
+                    <div className="flex-grow border-t border-[#DDDEE0]" />
                 </div>
 
-                {/* Sign In Button (Aligned to the Right) */}
-                <div className="flex justify-end pt-2">
+                {/* Social Rounded Square Buttons (Facebook & Google) */}
+                <div className="flex items-center justify-center gap-5">
+                    {/* Facebook Button */}
                     <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="h-10 px-8 rounded-full bg-[#CBFC01] hover:bg-[#bbf000] text-[#111111] font-poppins font-medium text-[14px] flex items-center justify-center transition-all active:scale-[0.98] shadow-xs cursor-pointer disabled:opacity-70"
+                        type="button"
+                        className="w-16 h-16 rounded-[22px] border border-[#DDDEE0] bg-transparent hover:bg-white/80 flex items-center justify-center text-[#111111] transition-all cursor-pointer shadow-2xs"
+                        aria-label="Sign in with Facebook"
                     >
-                        {isSubmitting ? "Signing in..." : "Sign In"}
+                        <FaFacebookF className="text-[22px]" />
+                    </button>
+
+                    {/* Google Button */}
+                    <button
+                        type="button"
+                        className="w-16 h-16 rounded-[22px] border border-[#DDDEE0] bg-transparent hover:bg-white/80 flex items-center justify-center text-[#111111] transition-all cursor-pointer shadow-2xs"
+                        aria-label="Sign in with Google"
+                    >
+                        <span className="font-poppins font-bold text-[24px]">G</span>
                     </button>
                 </div>
-            </form>
-
-            {/* Divider */}
-            <div className="relative my-7 sm:my-8 flex items-center">
-                <div className="flex-grow border-t border-[#E5E7EB]" />
-                <span className="shrink-0 px-3 text-[13px] text-[#82868E]">
-                    or
-                </span>
-                <div className="flex-grow border-t border-[#E5E7EB]" />
-            </div>
-
-            {/* Social Circle Buttons */}
-            <div className="flex items-center justify-center gap-4">
-                {/* Facebook Button */}
-                <button
-                    type="button"
-                    className="w-12 h-12 rounded-full border border-[#DDDEE0] bg-white hover:bg-[#F9FAFB] flex items-center justify-center text-[#111111] transition-all cursor-pointer shadow-2xs"
-                    aria-label="Sign in with Facebook"
-                >
-                    <FaFacebookF size={18} />
-                </button>
-
-                {/* Google Button */}
-                <button
-                    type="button"
-                    className="w-12 h-12 rounded-full border border-[#DDDEE0] bg-white hover:bg-[#F9FAFB] flex items-center justify-center text-[#111111] font-bold text-[18px] transition-all cursor-pointer shadow-2xs"
-                    aria-label="Sign in with Google"
-                >
-                    <span className="font-poppins font-bold text-[18px]">G</span>
-                </button>
             </div>
 
             {/* Bottom Link */}
-            <div className="mt-8 sm:mt-9 text-center">
-                <p className="text-[13.5px] text-[#55575B]">
+            <div className="pt-6 pb-1 text-center">
+                <p className="text-[14px] text-[#717378]">
                     New user?{" "}
                     <Link
                         href="/register"

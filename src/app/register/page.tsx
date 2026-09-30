@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 
 export default function RegisterPage() {
     return (
-        <div className="relative min-h-screen w-full bg-[#003BE2] hero-grid-pattern flex flex-col justify-between overflow-x-hidden p-6 sm:p-10 lg:p-14">
-            {/* Top-Left ByteSpace "b" Brand Logo */}
-            <div>
+        <div className="relative min-h-screen w-full bg-[#003BE2] hero-grid-pattern flex flex-col justify-between overflow-x-hidden p-6 sm:p-10 lg:px-14 lg:py-10">
+            {/* Top-Left ByteSpace "b" Brand Logo aligned with content */}
+            <div className="w-full max-w-[1240px] mx-auto">
                 <Link
                     href="/"
                     className="inline-block transition-transform hover:scale-105"
@@ -31,15 +31,15 @@ export default function RegisterPage() {
             </div>
 
             {/* Centered Main Content Area */}
-            <div className="w-full max-w-[1080px] mx-auto my-auto py-8 lg:py-4">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-center">
-                    {/* Left Column: Text + 3D Collage */}
-                    <div className="lg:col-span-6 xl:col-span-7 flex justify-center lg:justify-start">
+            <div className="w-full max-w-[1240px] mx-auto my-auto py-6 lg:py-8">
+                <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-14 xl:gap-20">
+                    {/* Left Column: Text + 3D Collage (Width ~495px) */}
+                    <div className="w-full max-w-[495px] shrink-0 flex justify-center lg:justify-start">
                         <AuthShowcaseCard type="signup" />
                     </div>
 
-                    {/* Right Column: Sign Up White Card */}
-                    <div className="lg:col-span-6 xl:col-span-5 w-full max-w-[460px] mx-auto lg:max-w-none">
+                    {/* Right Column: Sign Up Card (Width ~580px) */}
+                    <div className="w-full max-w-[580px] shrink-0 flex justify-center lg:justify-end">
                         <SignupForm />
                     </div>
                 </div>

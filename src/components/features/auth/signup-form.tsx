@@ -18,99 +18,102 @@ export default function SignupForm() {
     };
 
     return (
-        <div className="w-full bg-white rounded-[28px] sm:rounded-[32px] p-7 sm:p-10 md:p-12 shadow-[0_24px_60px_rgba(0,0,0,0.18)]">
-            {/* Header */}
+        <div className="w-full max-w-[580px] bg-[#F3F3F3] rounded-[32px] sm:rounded-[36px] px-8 sm:px-12 lg:px-14 py-10 sm:py-12 shadow-[0_24px_60px_rgba(0,0,0,0.18)] min-h-[720px] flex flex-col justify-between">
+            {/* Header & Inputs */}
             <div>
-                <span className="block text-[13.5px] font-medium text-[#003BE2] mb-1.5">
-                    Create an Account
-                </span>
-                <h2 className="font-poppins font-bold text-[32px] sm:text-[38px] text-[#111111] leading-[1.12] tracking-tight">
-                    Welcome to <br />
-                    ByteSpace
-                </h2>
+                {/* Header */}
+                <div>
+                    <span className="block text-[15px] sm:text-[16px] font-medium text-[#003BE2] mb-1.5">
+                        Create an Account
+                    </span>
+                    <h2 className="font-poppins font-bold text-[38px] sm:text-[44px] text-[#111111] leading-[1.08] tracking-[-0.02em]">
+                        Welcome to <br />
+                        ByteSpace
+                    </h2>
+                </div>
+
+                {/* Form */}
+                <form onSubmit={handleSubmit} className="mt-8 sm:mt-9 space-y-5">
+                    {/* Full Name */}
+                    <div>
+                        <label
+                            htmlFor="name"
+                            className="block text-[15px] font-medium text-[#1E2024] mb-2"
+                        >
+                            Full Name
+                        </label>
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            autoComplete="name"
+                            required
+                            placeholder="Jamie Davis"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            className="w-full h-14 px-5 rounded-[16px] border border-[#DDDEE0] bg-transparent text-[15px] text-[#111111] placeholder:text-[#9CA3AF] focus:bg-white focus:border-[#003BE2] focus:ring-1 focus:ring-[#003BE2] outline-none transition-all"
+                        />
+                    </div>
+
+                    {/* Email */}
+                    <div>
+                        <label
+                            htmlFor="email"
+                            className="block text-[15px] font-medium text-[#1E2024] mb-2"
+                        >
+                            Email
+                        </label>
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            inputMode="email"
+                            autoComplete="username"
+                            required
+                            placeholder="designer@example.com"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className="w-full h-14 px-5 rounded-[16px] border border-[#DDDEE0] bg-transparent text-[15px] text-[#111111] placeholder:text-[#9CA3AF] focus:bg-white focus:border-[#003BE2] focus:ring-1 focus:ring-[#003BE2] outline-none transition-all"
+                        />
+                    </div>
+
+                    {/* Password */}
+                    <div>
+                        <label
+                            htmlFor="new-password"
+                            className="block text-[15px] font-medium text-[#1E2024] mb-2"
+                        >
+                            Password
+                        </label>
+                        <input
+                            id="new-password"
+                            name="new-password"
+                            type="password"
+                            autoComplete="new-password"
+                            required
+                            placeholder="********"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            className="w-full h-14 px-5 rounded-[16px] border border-[#DDDEE0] bg-transparent text-[15px] text-[#111111] placeholder:text-[#9CA3AF] focus:bg-white focus:border-[#003BE2] focus:ring-1 focus:ring-[#003BE2] outline-none transition-all"
+                        />
+                    </div>
+
+                    {/* Continue Button (Aligned to the Right) */}
+                    <div className="flex justify-end pt-3">
+                        <button
+                            type="submit"
+                            disabled={isSubmitting}
+                            className="h-11.5 px-9 rounded-full bg-[#CBFC01] hover:bg-[#bbf000] text-[#111111] font-poppins font-semibold text-[15px] flex items-center justify-center transition-all active:scale-[0.98] shadow-xs cursor-pointer disabled:opacity-70"
+                        >
+                            {isSubmitting ? "Submitting..." : "Continue"}
+                        </button>
+                    </div>
+                </form>
             </div>
 
-            {/* Form */}
-            <form onSubmit={handleSubmit} className="mt-8 space-y-4">
-                {/* Full Name */}
-                <div>
-                    <label
-                        htmlFor="name"
-                        className="block text-[13px] font-medium text-[#222222] mb-1.5"
-                    >
-                        Full Name
-                    </label>
-                    <input
-                        id="name"
-                        name="name"
-                        type="text"
-                        autoComplete="name"
-                        required
-                        placeholder="Jamie Davis"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        className="w-full h-12 px-4 rounded-[10px] border border-[#E5E7EB] bg-white text-[14.5px] text-[#111111] placeholder:text-[#9CA3AF] focus:border-[#003BE2] focus:ring-1 focus:ring-[#003BE2] transition-colors"
-                    />
-                </div>
-
-                {/* Email */}
-                <div>
-                    <label
-                        htmlFor="email"
-                        className="block text-[13px] font-medium text-[#222222] mb-1.5"
-                    >
-                        Email
-                    </label>
-                    <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        inputMode="email"
-                        autoComplete="username"
-                        required
-                        placeholder="designer@example.com"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="w-full h-12 px-4 rounded-[10px] border border-[#E5E7EB] bg-white text-[14.5px] text-[#111111] placeholder:text-[#9CA3AF] focus:border-[#003BE2] focus:ring-1 focus:ring-[#003BE2] transition-colors"
-                    />
-                </div>
-
-                {/* Password */}
-                <div>
-                    <label
-                        htmlFor="new-password"
-                        className="block text-[13px] font-medium text-[#222222] mb-1.5"
-                    >
-                        Password
-                    </label>
-                    <input
-                        id="new-password"
-                        name="new-password"
-                        type="password"
-                        autoComplete="new-password"
-                        required
-                        placeholder="********"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        className="w-full h-12 px-4 rounded-[10px] border border-[#E5E7EB] bg-white text-[14.5px] text-[#111111] placeholder:text-[#9CA3AF] focus:border-[#003BE2] focus:ring-1 focus:ring-[#003BE2] transition-colors"
-                    />
-                </div>
-
-                {/* Continue Button (Aligned to the Right) */}
-                <div className="flex justify-end pt-3">
-                    <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="h-10 px-8 rounded-full bg-[#CBFC01] hover:bg-[#bbf000] text-[#111111] font-poppins font-medium text-[14px] flex items-center justify-center transition-all active:scale-[0.98] shadow-xs cursor-pointer disabled:opacity-70"
-                    >
-                        {isSubmitting ? "Submitting..." : "Continue"}
-                    </button>
-                </div>
-            </form>
-
             {/* Bottom Link */}
-            <div className="mt-10 sm:mt-12 text-center">
-                <p className="text-[13.5px] text-[#55575B]">
+            <div className="pt-8 pb-1 text-center">
+                <p className="text-[14px] text-[#717378]">
                     Already have an account?{" "}
                     <Link
                         href="/login"
