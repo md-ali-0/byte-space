@@ -45,12 +45,12 @@ const legalLinks = [
 
 export default function Footer() {
     const pathname = usePathname();
-    const isAuthPage =
+    const isHiddenPage =
         pathname?.startsWith("/register") ||
         pathname?.startsWith("/signup") ||
-        pathname?.startsWith("/login");
+        pathname?.startsWith("/login")
 
-    if (isAuthPage) {
+    if (isHiddenPage) {
         return null;
     }
 
@@ -110,7 +110,7 @@ export default function Footer() {
                         </p>
                     </div>
                     <div className="w-full lg:w-145 lg:pt-13.25">
-                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:items-start">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-6 lg:gap-0 lg:flex lg:items-start">
                             {linkColumns.map((col, idx) => (
                                 <ul
                                     key={idx}

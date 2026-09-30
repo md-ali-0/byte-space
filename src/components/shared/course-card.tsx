@@ -146,7 +146,6 @@ export default function CourseCard({
                     </div>
                 </div>
 
-                {/* Author */}
                 <p
                     className={`font-normal ${
                         isCompact
@@ -161,10 +160,12 @@ export default function CourseCard({
                 </p>
             </div>
 
-            {/* Bottom Section: Level, Avatars & Price */}
             <div className={isCompact ? "mt-3" : "mt-4 sm:mt-4.5"}>
-                <div className="flex items-center gap-3">
-                    {/* Level Badge */}
+                <div
+                    className={`flex items-center ${
+                        isCompact ? "justify-between" : "gap-3"
+                    }`}
+                >
                     <div
                         className={`inline-flex items-center font-medium rounded-full ${
                             isCompact
@@ -194,7 +195,6 @@ export default function CourseCard({
                         <span>{course.level}</span>
                     </div>
 
-                    {/* Student Avatars + Count Badge */}
                     <div className="flex items-center">
                         {studentAvatars.map((src, i) => (
                             <div
@@ -259,7 +259,7 @@ export default function CourseCard({
     );
 
     const baseClass = isCompact
-        ? "bg-white rounded-[22px] p-3.5 sm:p-4 select-none"
+        ? "bg-white rounded-[24px] p-3.5 sm:p-4 pb-4.5 sm:pb-5 select-none"
         : "group relative bg-white rounded-[24px] border border-[#E5E7EB] p-3.5 sm:p-4 pb-5 sm:pb-6 cursor-pointer transition-all duration-300 hover:shadow-lg hover:border-[#D0D3D9]";
 
     if (asLink) {
