@@ -1,7 +1,7 @@
 "use client";
 
 import CourseCard from "@/components/shared/course-card";
-import { coursesData, showcaseStudentAvatars } from "@/lib/courses-data";
+import { coursesData, showcaseStudentAvatars } from "@/data";
 import Image from "next/image";
 import { AiFillStar } from "react-icons/ai";
 
@@ -26,7 +26,7 @@ export default function AuthShowcaseCard({
 
     return (
         <div className="w-full flex flex-col justify-center text-white select-none">
-            <div className="max-w-[480px]">
+            <div className="max-w-120">
                 <h1 className="font-poppins font-bold text-white text-[32px] sm:text-[36px] leading-[1.15] tracking-tight">
                     {isSignup ? "Sign up and come in" : "Sign in with ease"}
                 </h1>
@@ -37,9 +37,9 @@ export default function AuthShowcaseCard({
                 </p>
             </div>
 
-            <div className="relative w-full max-w-[495px] h-[480px] mt-6 sm:mt-8">
+            <div className="relative w-full max-w-123.75 h-120 mt-6 sm:mt-8">
 
-                <div className="absolute top-[75px] left-0 w-[335px] sm:w-[345px] z-10 opacity-95">
+                <div className="absolute top-18.75 left-0 w-83.75 sm:w-86.25 z-10 opacity-95">
                     <CourseCard
                         course={coursesData[1]}
                         size="compact"
@@ -51,7 +51,7 @@ export default function AuthShowcaseCard({
                     />
                 </div>
 
-                <div className="absolute top-0 left-[98px] sm:left-[102px] w-[355px] sm:w-[368px] z-20">
+                <div className="absolute top-0 left-24.5 sm:left-25.5 w-88.75 sm:w-92 z-20">
                     <CourseCard
                         course={coursesData[2]}
                         size="compact"
@@ -64,7 +64,7 @@ export default function AuthShowcaseCard({
                     />
                 </div>
 
-                <div className="absolute top-[44px] left-[42px] z-30 w-[102px] pointer-events-none drop-shadow-[0_10px_20px_rgba(0,0,0,0.25)] rotate-[22deg]">
+                <div className="absolute top-11 left-10.5 z-30 w-25.5 pointer-events-none drop-shadow-[0_10px_20px_rgba(0,0,0,0.25)] rotate-22">
                     <Image
                         src="/images/patterns/pattern-4-lime.png"
                         alt="Lime Torus"
@@ -75,7 +75,7 @@ export default function AuthShowcaseCard({
                     />
                 </div>
 
-                <div className="absolute top-[345px] -left-3 z-30 w-[126px] pointer-events-none drop-shadow-[0_12px_24px_rgba(0,0,0,0.22)]">
+                <div className="absolute top-86.25 -left-3 z-30 w-31.5 pointer-events-none drop-shadow-[0_12px_24px_rgba(0,0,0,0.22)]">
                     <Image
                         src="/images/patterns/pattern-3-lime.png"
                         alt="Lime Pyramid"
@@ -86,7 +86,7 @@ export default function AuthShowcaseCard({
                     />
                 </div>
 
-                <div className="absolute top-[275px] left-[360px] z-35 w-[118px] pointer-events-none drop-shadow-[0_10px_20px_rgba(0,0,0,0.2)] rotate-6">
+                <div className="absolute top-68.75 left-90 z-35 w-29.5 pointer-events-none drop-shadow-[0_10px_20px_rgba(0,0,0,0.2)] rotate-6">
                     <Image
                         src="/images/patterns/pattern-5.png"
                         alt="White Zigzag Ribbon"
@@ -97,7 +97,7 @@ export default function AuthShowcaseCard({
                     />
                 </div>
 
-                <div className="absolute top-[355px] left-[230px] z-30 bg-[#CBFC01] rounded-[24px] p-4 shadow-[0_14px_30px_rgba(0,0,0,0.18)] w-[252px]">
+                <div className="absolute top-88.75 left-57.5 z-30 bg-[#CBFC01] rounded-3xl p-4 shadow-[0_14px_30px_rgba(0,0,0,0.18)] w-157.5">
                     <div className="flex items-center justify-between">
                         <h4 className="font-poppins font-semibold text-[13.5px] text-[#111111] leading-tight">
                             Happy Students

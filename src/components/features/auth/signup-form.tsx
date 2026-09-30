@@ -12,16 +12,13 @@ export default function SignupForm() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate registration response
         await new Promise((resolve) => setTimeout(resolve, 800));
         setIsSubmitting(false);
     };
 
     return (
-        <div className="w-full max-w-[580px] bg-[#F3F3F3] rounded-[32px] sm:rounded-[36px] px-8 sm:px-12 lg:px-14 py-10 sm:py-12 shadow-[0_24px_60px_rgba(0,0,0,0.18)] min-h-[720px] flex flex-col justify-between">
-            {/* Header & Inputs */}
+        <div className="w-full max-w-145 bg-[#F3F3F3] rounded-4xl sm:rounded-[36px] px-8 sm:px-12 lg:px-14 py-10 sm:py-12 shadow-[0_24px_60px_rgba(0,0,0,0.18)] min-h-180 flex flex-col justify-between">
             <div>
-                {/* Header */}
                 <div>
                     <span className="block text-[15px] sm:text-[16px] font-medium text-[#003BE2] mb-1.5">
                         Create an Account
@@ -32,9 +29,7 @@ export default function SignupForm() {
                     </h2>
                 </div>
 
-                {/* Form */}
                 <form onSubmit={handleSubmit} className="mt-8 sm:mt-9 space-y-5">
-                    {/* Full Name */}
                     <div>
                         <label
                             htmlFor="name"
@@ -55,7 +50,6 @@ export default function SignupForm() {
                         />
                     </div>
 
-                    {/* Email */}
                     <div>
                         <label
                             htmlFor="email"
@@ -77,7 +71,6 @@ export default function SignupForm() {
                         />
                     </div>
 
-                    {/* Password */}
                     <div>
                         <label
                             htmlFor="new-password"
@@ -98,7 +91,6 @@ export default function SignupForm() {
                         />
                     </div>
 
-                    {/* Continue Button (Aligned to the Right) */}
                     <div className="flex justify-end pt-3">
                         <button
                             type="submit"
@@ -110,8 +102,7 @@ export default function SignupForm() {
                     </div>
                 </form>
             </div>
-
-            {/* Bottom Link */}
+            
             <div className="pt-8 pb-1 text-center">
                 <p className="text-[14px] text-[#717378]">
                     Already have an account?{" "}

@@ -12,16 +12,13 @@ export default function LoginForm() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate sign in response
         await new Promise((resolve) => setTimeout(resolve, 800));
         setIsSubmitting(false);
     };
 
     return (
-        <div className="w-full max-w-[580px] bg-[#F3F3F3] rounded-[32px] sm:rounded-[36px] px-8 sm:px-12 lg:px-14 py-10 sm:py-12 shadow-[0_24px_60px_rgba(0,0,0,0.18)] min-h-[720px] flex flex-col justify-between">
-            {/* Header & Inputs */}
+        <div className="w-full max-w-145 bg-[#F3F3F3] rounded-4xl sm:rounded-[36px] px-8 sm:px-12 lg:px-14 py-10 sm:py-12 shadow-[0_24px_60px_rgba(0,0,0,0.18)] min-h-180 flex flex-col justify-between">
             <div>
-                {/* Header */}
                 <div>
                     <span className="block text-[15px] sm:text-[16px] font-medium text-[#003BE2] mb-1.5">
                         Sign In
@@ -31,9 +28,7 @@ export default function LoginForm() {
                     </h2>
                 </div>
 
-                {/* Form */}
                 <form onSubmit={handleSubmit} className="mt-8 sm:mt-9 space-y-5">
-                    {/* Email */}
                     <div>
                         <label
                             htmlFor="login-email"
@@ -55,7 +50,6 @@ export default function LoginForm() {
                         />
                     </div>
 
-                    {/* Password */}
                     <div>
                         <label
                             htmlFor="current-password"
@@ -76,7 +70,6 @@ export default function LoginForm() {
                         />
                     </div>
 
-                    {/* Sign In Button (Aligned to the Right) */}
                     <div className="flex justify-end pt-3">
                         <button
                             type="submit"
@@ -88,18 +81,15 @@ export default function LoginForm() {
                     </div>
                 </form>
 
-                {/* Divider */}
                 <div className="relative my-7 sm:my-8 flex items-center">
-                    <div className="flex-grow border-t border-[#DDDEE0]" />
+                    <div className="grow border-t border-[#DDDEE0]" />
                     <span className="shrink-0 px-4 text-[14px] text-[#82868E]">
                         or
                     </span>
-                    <div className="flex-grow border-t border-[#DDDEE0]" />
+                    <div className="grow border-t border-[#DDDEE0]" />
                 </div>
 
-                {/* Social Rounded Square Buttons (Facebook & Google) */}
                 <div className="flex items-center justify-center gap-5">
-                    {/* Facebook Button */}
                     <button
                         type="button"
                         className="w-16 h-16 rounded-[22px] border border-[#DDDEE0] bg-transparent hover:bg-white/80 flex items-center justify-center text-[#111111] transition-all cursor-pointer shadow-2xs"
@@ -107,8 +97,6 @@ export default function LoginForm() {
                     >
                         <FaFacebookF className="text-[22px]" />
                     </button>
-
-                    {/* Google Button */}
                     <button
                         type="button"
                         className="w-16 h-16 rounded-[22px] border border-[#DDDEE0] bg-transparent hover:bg-white/80 flex items-center justify-center text-[#111111] transition-all cursor-pointer shadow-2xs"
@@ -119,7 +107,6 @@ export default function LoginForm() {
                 </div>
             </div>
 
-            {/* Bottom Link */}
             <div className="pt-6 pb-1 text-center">
                 <p className="text-[14px] text-[#717378]">
                     New user?{" "}

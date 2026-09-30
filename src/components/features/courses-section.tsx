@@ -1,7 +1,7 @@
 "use client";
 
 import CourseCard from "@/components/shared/course-card";
-import { categoryRows, coursesData } from "@/lib/courses-data";
+import { categoryRows, coursesData } from "@/data";
 import { useState } from "react";
 
 export default function CoursesSection() {

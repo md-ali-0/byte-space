@@ -29,7 +29,6 @@ export default function Navbar() {
     return (
         <header className="w-full bg-[#003BE2] text-[#F5F5F6] relative z-50 hero-grid-pattern">
             <nav className="container-page flex h-25 md:h-30 items-center justify-between">
-                {/* Logo */}
                 <Link
                     href="/"
                     className="shrink-0 transition-transform hover:scale-[1.02]"
@@ -45,7 +44,6 @@ export default function Navbar() {
                     />
                 </Link>
 
-                {/* Main Navigation Links */}
                 <ul className="hidden md:flex items-center gap-8 lg:gap-10">
                     {navItems.map((item) => {
                         const isActive =
@@ -70,7 +68,6 @@ export default function Navbar() {
                     })}
                 </ul>
 
-                {/* Right Action Menu */}
                 <div className="flex items-center gap-6 md:gap-7">
                     <Link
                         href="/login"

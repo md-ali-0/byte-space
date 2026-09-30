@@ -110,7 +110,6 @@ export default function HeroSection() {
                     />
                 </div>
 
-                {/* Pattern 3: Mid-Right White Pyramid */}
                 <div
                     className="absolute z-10 pointer-events-none animate-float-slow"
                     style={{
