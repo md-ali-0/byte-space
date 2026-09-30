@@ -16,8 +16,8 @@ const studentAvatars = [
 
 export default function HeroSection() {
     return (
-        <section className="relative w-full bg-[#003BE2] overflow-hidden min-h-205 lg:h-220 hero-grid-pattern select-none">
-            <div className="relative w-full max-w-360 h-full min-h-205 lg:h-207.5 mx-auto">
+        <section className="relative w-full bg-[#003BE2] overflow-hidden min-h-147.5 sm:min-h-170 md:min-h-195 lg:h-220 hero-grid-pattern select-none">
+            <div className="relative w-full max-w-360 h-full min-h-145 sm:min-h-170 md:min-h-195 lg:h-207.5 mx-auto">
                 <div
                     className="absolute left-1/2 -translate-x-1/2 pointer-events-none rounded-full hidden sm:block"
                     style={{
@@ -35,7 +35,7 @@ export default function HeroSection() {
                     style={{
                         width: "560px",
                         height: "560px",
-                        top: "450px",
+                        top: "360px",
                         border: "140px solid #CBFC01",
                         boxSizing: "border-box",
                     }}
@@ -43,7 +43,7 @@ export default function HeroSection() {
                 />
 
                 <div
-                    className="absolute z-10 pointer-events-none"
+                    className="hidden lg:block absolute z-10 pointer-events-none"
                     style={{
                         top: "40px",
                         left: "calc(50% - 720px - 25px)",
@@ -60,7 +60,7 @@ export default function HeroSection() {
                 </div>
 
                 <div
-                    className="absolute z-10 pointer-events-none"
+                    className="hidden lg:block absolute z-10 pointer-events-none"
                     style={{
                         top: "320px",
                         left: "calc(50% - 720px + 180px)",
@@ -77,7 +77,7 @@ export default function HeroSection() {
                 </div>
 
                 <div
-                    className="absolute z-10 pointer-events-none"
+                    className="hidden lg:block absolute z-10 pointer-events-none"
                     style={{
                         top: "530px",
                         left: "calc(50% - 740px)",
@@ -94,7 +94,7 @@ export default function HeroSection() {
                 </div>
 
                 <div
-                    className="absolute z-10 pointer-events-none"
+                    className="hidden lg:block absolute z-10 pointer-events-none"
                     style={{
                         top: "30px",
                         right: "calc(50% - 720px - 25px)",
@@ -111,7 +111,7 @@ export default function HeroSection() {
                 </div>
 
                 <div
-                    className="absolute z-10 pointer-events-none animate-float-slow"
+                    className="hidden lg:block absolute z-10 pointer-events-none animate-float-slow"
                     style={{
                         top: "290px",
                         left: "calc(50% + 395px)",
@@ -128,7 +128,7 @@ export default function HeroSection() {
                 </div>
 
                 <div
-                    className="absolute z-10 pointer-events-none"
+                    className="hidden lg:block absolute z-10 pointer-events-none"
                     style={{
                         top: "550px",
                         left: "calc(50% + 430px)",
@@ -182,7 +182,7 @@ export default function HeroSection() {
                 </div>
 
                 <div
-                    className="absolute right-90 translate z-20 pointer-events-none w-85 sm:w-110 md:w-130 lg:w-144.5 h-80 sm:h-100 md:h-120 lg:h-144.5 top-82.5 sm:top-83.75 md:top-75.25"
+                    className="absolute left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:right-90 z-20 pointer-events-none w-85 sm:w-110 md:w-130 lg:w-144.5 h-80 sm:h-100 md:h-120 lg:h-144.5 top-67.5 sm:top-66.25 md:top-75.25"
                 >
                     <Image
                         src="/images/hero-student-clean.png"

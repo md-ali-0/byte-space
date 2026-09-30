@@ -1,9 +1,9 @@
+import { Course, CourseDetails, CreatorProfile } from "@/types/course";
 import categoriesData from "./categories.json";
 import courseDetailsJson from "./course-details.json";
 import coursesDataJson from "./courses.json";
 import creatorDataJson from "./creator.json";
 import testimonialsData from "./testimonials.json";
-import { Course, CourseDetails, CreatorProfile } from "@/types/course";
 
 export const allCoursesData: Course[] = coursesDataJson as Course[];
 export const coursesData: Course[] = allCoursesData.slice(0, 6);
@@ -45,7 +45,6 @@ export const categoryRows = [
     ["Crafts", "Gaming", "Graphic Design", "Freelance & Entrepreneurship"],
 ];
 
-// Helper functions using default fetch
 export async function fetchCourses(): Promise<Course[]> {
     const res = await fetch("/data/courses.json");
     if (!res.ok) {
@@ -77,7 +76,7 @@ export async function fetchCourseDetails(): Promise<CourseDetails> {
             return await res.json();
         }
     } catch {
-        // Fallback to defaultCourseDetails if fetch fails
+        //
     }
     return defaultCourseDetails;
 }
