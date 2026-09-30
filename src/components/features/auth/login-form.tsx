@@ -17,7 +17,7 @@ export default function LoginForm() {
     };
 
     return (
-        <div className="w-full max-w-145 bg-[#F3F3F3] rounded-4xl sm:rounded-[36px] px-8 sm:px-12 lg:px-14 py-10 sm:py-12 shadow-[0_24px_60px_rgba(0,0,0,0.18)] min-h-180 flex flex-col justify-between">
+        <div className="w-full max-w-145 bg-white rounded-4xl sm:rounded-[36px] px-8 sm:px-12 lg:px-14 py-10 sm:py-12 shadow-[0_24px_60px_rgba(0,0,0,0.18)] min-h-180 flex flex-col justify-between">
             <div>
                 <div>
                     <span className="block text-[15px] sm:text-[16px] font-medium text-[#003BE2] mb-1.5">

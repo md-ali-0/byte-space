@@ -45,12 +45,12 @@ const legalLinks = [
 
 export default function Footer() {
     const pathname = usePathname();
-    const isAuthPage =
+    const isHiddenPage =
         pathname?.startsWith("/register") ||
         pathname?.startsWith("/signup") ||
-        pathname?.startsWith("/login");
+        pathname?.startsWith("/login")
 
-    if (isAuthPage) {
+    if (isHiddenPage) {
         return null;
     }
 

@@ -30,8 +30,8 @@ export default function RegisterPage() {
             </div>
 
             <div className="w-full max-w-310 mx-auto my-auto py-6 lg:py-8">
-                <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-14 xl:gap-20">
-                    <div className="w-full max-w-123.75 shrink-0 flex justify-center lg:justify-start">
+                <div className="flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-14 xl:gap-20">
+                    <div className="w-full max-w-123.75 shrink-0 flex justify-center lg:justify-start pt-2 lg:pt-3">
                         <AuthShowcaseCard type="signup" />
                     </div>
 
