@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 ByteSpace — Online Learning Platform
 
-## Getting Started
+A modern, pixel-perfect e-learning web platform built with **Next.js 16 (App Router)**, **TypeScript**, and **Tailwind CSS v4**, based on the Figma design.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔗 Links
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Live Demo:** [Vercel Deployment URL](https://byte-space.vercel.app) *(Replace with your live URL)*
+- **Figma Design:** [ByteSpace Figma File](https://www.figma.com/design/26TBgRjmpuxudcErJsHUfy/ByteSpace-New-Check-website?node-id=0-1)
+- **Repository:** [GitHub Repository](https://github.com/md-ali-0/byte-space)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Features
 
-## Learn More
+- **🏠 Landing Page (Required):**
+  - Modern Hero section with interactive search and visual showcase
+  - Trusted Brands bar
+  - Category-based course catalog with live filtering
+  - Growth & Course Management section with revenue & stats badges
+  - Learner testimonials and Creator CTA section
+  - Full-featured responsive footer with newsletter signup
+- **🔐 Auth Pages (Bonus / Extra Credit):**
+  - Pixel-perfect **Sign In** and **Sign Up** pages with form validation
+- **📚 Course & Creator Features:**
+  - **Course Details Page:** Overview, sneak peeks, video modal, and tabs for Lessons & Student Reviews
+  - **Creator Profile Page:** Creator bio, stats, followers toggle, and course catalog
+  - **Custom 404 Page:** Clean, custom-designed not-found page
+- **📱 100% Responsive Design:**
+  - Fluid layouts across Mobile (375px+), Tablet (768px+), and Desktop (1024px, 1440px+)
+  - Mobile navigation drawer with animated hamburger toggle
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Framework:** Next.js 16 (App Router with Turbopack)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Icons:** React Icons (`react-icons`)
+- **Package Manager:** pnpm
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Getting Started
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/md-ali-0/byte-space.git
+   cd byte-space
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   pnpm install
+   ```
+
+3. **Start the local development server:**
+   ```bash
+   pnpm dev
+   ```
+
+4. **Open in browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000).
