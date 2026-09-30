@@ -1,13 +1,15 @@
-import { Course } from "@/types/course";
 import categoriesData from "./categories.json";
+import courseDetailsJson from "./course-details.json";
 import coursesDataJson from "./courses.json";
 import testimonialsData from "./testimonials.json";
+import { Course, CourseDetails } from "@/types/course";
 
 export const allCoursesData: Course[] = coursesDataJson as Course[];
 export const coursesData: Course[] = allCoursesData.slice(0, 6);
 export const pageOneCoursesData: Course[] = allCoursesData.slice(0, 18);
 export const coursePageCategories: string[] = categoriesData;
 export const testimonials = testimonialsData;
+export const defaultCourseDetails: CourseDetails = courseDetailsJson as CourseDetails;
 
 export const defaultStudentAvatars = [
     "/avatars/avatar-2.png",
@@ -64,4 +66,16 @@ export async function fetchTestimonials() {
         throw new Error("Failed to fetch testimonials data");
     }
     return res.json();
+}
+
+export async function fetchCourseDetails(): Promise<CourseDetails> {
+    try {
+        const res = await fetch("/data/course-details.json");
+        if (res.ok) {
+            return await res.json();
+        }
+    } catch {
+        // Fallback to defaultCourseDetails if fetch fails
+    }
+    return defaultCourseDetails;
 }
